@@ -1,0 +1,3302 @@
+0:00
+Learn how to build a full stack Google calendar clone entirely from scratch
+0:05
+using PHP, MySQL, JavaScript, HTML, and CSS. No frameworks, no external
+0:13
+libraries, just clean, understandable code. Muhammad Albra developed this
+0:18
+course. Hey everyone. In this tutorial, we're diving into an exciting new challenge in
+0:25
+web development. Building a Google Calendar app clone from scratch. We'll
+0:31
+be using HTML 5, CSS3, JavaScript, PHP,
+0:36
+and SQL to bring this powerful interactive scheduling app to life. Get
+0:42
+ready to master dynamic event handling responsive layouts and database
+0:48
+integration all in one hands-on project. So let's get started and see you in
+0:53
+Visual Studio Code. Welcome to the course calendar app, a
+Live Demo: Full Calendar App in Action
+0:59
+dynamic web- based scheduling application built using PHP, MySQL,
+1:05
+JavaScript, HTML, and CSS. It allows users to add, edit, and delete multi-day
+1:14
+events with an intuitive interface, all in a clean mobilefriendly layout.
+1:20
+Whether you are building a learning management system, managing training
+1:25
+sessions or organizing team events, this project provides a lightweight but a
+1:31
+powerful solution. technologies used PHP for back-end scripting, form handling,
+1:38
+database communication. So we will learn how PHP interact as a back-end scripting
+1:45
+language and how it performs form handling, how to handle data coming from
+1:51
+the forms and also how to communicate and interact with the database using PHP
+1:58
+MySQL to or as a persistent data storage
+2:03
+for appointments to store and to store the events and tasks inside an SQL.
+2:10
+table or database JavaScript as a client side calendar logic event rendering and
+2:18
+also modal controls. So the JavaScript will allow us to show up to show popups
+2:24
+and also to make the page interactive and live and HTML 5. We will use HTML 5
+2:32
+to design and build the structure of the user interface and also of course we
+2:37
+will use CSS3 for styling and responsiveness to make
+2:43
+the app responsive and also we will use Google font which is my favorite Google
+2:48
+font which is enter a clean modern typography which is enter font. So if
+2:55
+you notice here in the app, we have a nice header and also we have a clock
+3:01
+running and also we have this calendar box which is amazing. If you try to to
+3:07
+go back, you can go back May, a April and so on. And if you want to go fourth,
+3:14
+you can go fourth. Okay. Until you can see that the year will uh be will become
+3:21
+2026. If you reload the page again, it will redirect you to the current
+3:28
+month, current year, and also the current day. You can see that the current day is highlighted with the
+3:34
+background as blue. Now, if you want to add new task, you can do that, of
+3:39
+course, by typing in typing in the course title, for example, the the
+3:44
+course title as data engineering boot camp. And then you can uh define the
+3:52
+instructor name for example as me Muhammad. And then start date you can
+3:57
+specify it if you want. End date. The start date will be by default the chosen
+4:03
+day. If you click on the sixth of this month it will be here the 6th of this month which is in this uh in this time
+4:11
+the June month which is six. Then you can update the end date by going for
+4:16
+example to the 10th of this month. So you can choose any date you want. I chosen in this
+4:23
+uh 10. Then start time for example let's start from the 8:00
+4:31
+a.m. to 12:00 a.m. Now we can save that. And as you see we have here data
+4:39
+engineering boot camp. The instructor is Muhammad and it starts from 8:00 to
+4:45
+12:00 which is 000000 and then it spans over to the 10th of
+4:52
+this month. Okay. Then we can edit. So if you hover over this you can see that
+4:58
+we have an edit button. Now if you click on edit you can edit the course title
+5:03
+you can edit the instructor name and also you can edit the range of the date the start date and end date and also you
+5:10
+can edit the starting time and ending time. Let's in this case uh uh edit the
+5:15
+instructor name to be in this case for example Smith and now save that the you
+5:22
+can see that appointment updated successfully which is nice. Now the instructor is Smith. Okay.
+5:29
+Also, we we can edit it and edit the start date to start for example from the
+5:35
+15 of this month till the 20 of this month. So, we can go from 15 of this
+5:41
+month till the 20 of this month by choosing 20. Then we can save that. It
+5:49
+spans now from 15 to 20. Okay. So, we can update the range of the date. We can
+5:54
+also update the instructor name. And also we can update the name of the course by going edit and update it to
+6:02
+for example data visualization data visualization and then save that we
+6:08
+have a nice data visualization boot camp ready to go. Okay. Also we can add
+6:14
+multiple events on the same day by going edit uh excuse me by going add a new
+6:23
+event and then name that event. So course title for example I'm going to
+6:28
+name it as for example PHP course then the instructor name is John start date
+6:36
+let's start it from the 15 till the 25 of this month
+6:43
+then we can update the start time or keep it the same let's update the start time to be for example from 11 a.m. to
+6:51
+12:00 a.m. or we can update that to P.M. 11:00 p.m.
+6:56
+to 12 a.m. Okay, then save that. Then you can notice that we have now an
+7:02
+overlapping that starts from 15 and spans over the way all the way up to the 25 of this
+7:09
+month. So you can notice that we have here some overlappings. We have two events, but here we have this event
+7:17
+alone. PHP course. The instructor is John and the starting time is 23 and the
+7:23
+ending time is 12 a.m. Okay. So in this video we will try to build this app and
+7:31
+also we will learn some techniques in JavaScript and PHP to fetch the data. If
+7:37
+you go to this uh PHP myadmin interface and then go to appointments browse this
+7:43
+it will show that we have now created uh two courses. The first is data
+7:50
+visualization boot camp and the second is PHP course. The instructor name the
+7:55
+the name of the instructor for the data visualization boot camp is Smith and the start date it starts
+8:02
+15 of this month. Okay. And the end date it ends on the 20 of this month. And for
+8:08
+the PHP course it starts from the 15 of this month but it lasts or it continues
+8:14
+till the 25 of this month. And also we have the starting time and ending time
+8:20
+as you can see. So in this video we will try to build this app using full stack
+8:26
+languages or uh full stack web development languages HTML, CSS,
+8:31
+JavaScript, PHP and SQL. So and also we can delete
+8:37
+delete an event by going delete and then it will show a popup for for confirming
+8:43
+that as a confirmation as a confirmation popup. Are you sure you want to delete this appointment? Okay. And then this
+8:50
+appointment now is deleted. And notice that when we hover on a day
+8:57
+that doesn't have events, it just shows one button as add. But when we hover
+9:03
+over an a a day that has an existing or has a pre uh pre-existing event, it has
+9:12
+two buttons, add and edit. We can add new appointment or we can edit the
+9:18
+existing appointment. Okay. And when we have multiple events, let's try to add
+9:23
+multiple events by giving for example AI boot camp instructor name Smith and then
+9:30
+or for example uh an instructor name as Alex. Then the start date keep it the
+9:36
+same. Let's keep it end date as for example the 30 of this month. Now we
+9:43
+can save. Now we have another course as AI boot camp. And when when we try to edit this day it will show a select that
+9:52
+you can choose which event do you want to edit. So which event you want to update. We can update the data
+9:58
+visualization boot camp and also we can update the AI boot camp. Let's try to
+10:04
+update the the AI boot camp and then uh update its for example end date to be
+10:11
+28. And also we can update the instructor name as or or for example the course
+10:17
+title from AI boot camp to artificial artificial intelligence
+10:23
+intelligence boot camp and then update the start time to start for example from
+10:29
+7th till the 12 or for example 10:00. Now
+10:34
+let's save that and it's now updated. Now we have an artificial intelligence
+10:40
+boot camp that starts from the 21 of this or or starts from the 19 of this
+10:47
+month and then spans all the way to 28 because we have excluded this these two
+10:52
+days. Okay. So you when we when we do edit on a day that has multiple events,
+10:58
+it will show us an a select menu, a drop-own menu that you can choose which
+11:05
+uh which appointment, which task, which event you want to update. Okay, so let's
+11:10
+dive in together and let's build this project together. See you in Visual
+11:16
+Studio Code and let's dive in. In this section, we will build the HTML
+HTML Structure: Building the Foundation
+11:24
+structure for the calendar project. So, first of all, we need to run exam
+11:30
+server. So, we can search exam.
+11:37
+So, as you notice here, I have started the Apache server and the MySQL server.
+11:44
+So if you don't have these two started, you can click start and it will start.
+11:50
+If you don't have exam server installed on your computer, you can go install
+11:56
+exam. The first website will will be download exam. Go into it
+12:04
+and then you will notice this website which is apachefriend.org.
+12:09
+This website will help you download the exam server on your computer locally. So
+12:16
+you can choose your appropriate OS system and then choose whatever bits you
+12:23
+have 64bit or whatever you have and then you can download it locally whether you
+12:28
+have uh Linux whether you have Mac OS and so on. So you have to download examp
+12:42
+you search here exampl
+12:49
+server to be able to run this project locally. With that being said, now we need to
+12:58
+create a folder inside the C. So we have
+13:03
+to go into folders and then choose this PC and then go into the C and then we
+13:11
+have to go into examp folder. Then we have to choose this folder
+13:16
+hypertext documents which is HT docs. Inside this folder, we have to create a
+13:24
+new folder. For example, I'm going to call it calendar
+13:31
+project or dash project. So now this is my folder. It's empty.
+13:37
+Now I will open this folder using Visual Studio Code. So let's open Visual Studio
+13:43
+Code which is opened already. And then go to file, open folder.
+13:49
+Then we have to go down this PC C
+13:56
+choose examp folder hypertext documents and then choose our calendar project
+14:02
+folder. Select folder and there we go. So now we have this folder opened. We
+14:09
+can create files. Let's create our very first file in this project which is
+14:16
+called index.php. So you will notice that there is an
+14:21
+elephant icon here which is really nice. Now we can go ahead and start coding
+14:29
+this project. So the first thing I will use is dock type HTML. So the document
+14:38
+type the type of this document is HTML. This code is really important to denote
+14:44
+that this document is of HTML type. And then the first element we have to use is
+14:50
+HTML and we have to close this HTML element or tag. We have to specify that
+14:57
+the lang is English is English. So language the language of this page is in
+15:02
+English language and we have to specify that that the direction is left to
+15:08
+right. Next we have to start a head element or head tag
+15:17
+and then inside head we will specify meta the meta element and then character
+15:23
+set we will set it to the best car set which is UTF-8
+15:30
+which supports a lot of characters and a lot of different letters in many different languages and meta name
+15:38
+viewport report. So if you want to if you want your page to be responsive and
+15:44
+if you want your page to scale across many different devices or across many different screen sizes, you have to set
+15:51
+this meta tag metame viewport. So the viewport and then specify the content
+15:58
+attribute as width equals width equals device dash width device-width
+16:07
+and then put a comma initial initial dash scale equals 1.0.
+16:15
+So we have to specify width equals device- width and then put a comma
+16:21
+initial-scale. So the initial scale equals one and then you you might want
+16:27
+to put a title for this project. I will use this title calendar
+16:34
+project. So you can specify it as whatever you want. And then after title
+16:40
+you might put whatever meta tags here. For example meta name description
+16:46
+specify some some description for it. For example, I will write in here my own
+16:52
+calendar. C calendar project for example. You want to specify it as
+16:58
+you want. Whatever you want, you can specify it as you want. So this that's
+17:03
+enough for the for the meta tags and titles. There are a lot of types a lot of other types of meta tags. Uh you can
+17:11
+search for it and use whatever you want uh to to make it co friendly. Co is
+17:18
+short for search engine optimization. But the most important thing in here is
+17:24
+we have to create a link tag that link that that will link to a CSS file. So I
+17:33
+have to specify the relationship as stylesheet stylesheet and then href. So
+17:40
+here we have to put the path to the CSS file. So let's create a CSS file which
+17:47
+is called style dot CSS. We will put all of of of our styling content in this
+17:54
+file style. CSS and we will link all or we will refer to this file in here in
+18:02
+this attribute href. So let's write in here style dot CSS.
+18:08
+Now we have created our head section successfully. we can move on to the body
+18:14
+section. Body will contain the following contents. So all of our
+18:20
+page content will be inside the body tag. The first thing we will create
+18:29
+the first thing we will create is the header tag. So we have to go header.
+18:36
+So header and then slash header. So the header tag will contain an H1 tag
+18:45
+which is the main title for this page. Let's set it as for example let's put an
+18:52
+icon of calendar
+18:58
+and then course calendar. Let's write in here
+19:04
+course calendar and then put some break element and then and then let's write in
+19:10
+here my calendar project. You can write
+19:15
+whatever you want in here. After the header tag, let's go ahead and create a
+19:22
+div element for the clock. So we want a clock. So let's write a comment in here.
+19:29
+Clock. Let's create a div element. So div is short for division. div class equals
+19:37
+clock container. Clock dash container. And then inside this div element,
+19:46
+let's create another div element which which has the id attribute. So the id is
+19:52
+a unique identifier for this div. ID as clock. And then let's put /ashdev. So
+19:59
+now this div element will show us a live
+20:05
+clock that will start from the current time and then counts every every second
+20:11
+it will increase the time by 1 second and then it will count the clock for us.
+20:17
+So this is a box for the clock item and then after this div after this clock div
+20:23
+we will add the calendar section. So we will create calendar section by going
+20:31
+div and then class let's specify a class for this div as calendar
+20:38
+and then slashde
+20:43
+inside the calendar section div we will create another div
+20:49
+with the class nav btn container. So this container will contain the
+20:57
+navigation arrows that will help us or allows us to navigate between months. So
+21:04
+we can go one month uh we we can go to the next month or we
+21:11
+can go back to the last to the to the last month. So we can uh we can navigate
+21:17
+between months. So let's create a div class and then specify it as nav-btn. So
+21:26
+the button the button of the navigation item and then on click when we click on
+21:32
+this button we will invoke a function later in JavaScript section we will
+21:38
+create a function called change month change month. And then we will invoke
+21:43
+this function in here and we will inc uh we will pass in here minus one. So but
+21:51
+we will keep this for later when when we use JavaScript. Okay. But this button
+21:58
+will be used to navigate between months. So div and then let's specify it as
+22:06
+nav-btn and then we have to put in here slashd div
+22:14
+and we may use an icon of previous
+22:19
+previous button like this. After it we will add a an H2 tag H2
+22:28
+element and specify ID equals month year month year
+22:35
+style equals margin month year and then we might give it style as margin zero to
+22:43
+to to make the margin of this H2 as zero to zero the margin of the heading two
+22:48
+and then we will not write anything here just it will like a separator and then we will
+22:56
+add another button another button slash and then slash button
+23:02
+and then specify the on click later we as we said we will specify the on click
+23:08
+later now we will we will set the class attribute as nav-btn
+23:14
+and in here we will put next icon
+23:21
+actually we need to set this as button. So we need to set this element as button
+23:27
+and then slashutton. Okay. So I have a button for going for going the to the
+23:32
+previous month and we have a button for going to the next month.
+23:39
+Now that we have finished this section, we can create another div. Notice this
+23:45
+div will be inside will will be still inside this class calendar but outside
+23:52
+of the div class nav btn container. So outside of this div we will go outside
+23:59
+it and then add a new div as class equals
+24:05
+calendar. We will name the class as calendar-g grid and then specify id
+24:10
+equals calendar. And then we will close this div by going
+24:17
+/. So this div will be used to to display
+24:22
+the calendar to display the calendar grid. Okay. So the class is calendar-g
+24:27
+grid and the id set it as calendar. After this
+24:34
+uh calendar section, we need to create another section which is model
+24:41
+for add for add slashedit slashdelete
+24:48
+appointment. So we need to add a model that will help us add edit delete
+24:55
+appointments to affect the calendar. So let's go div
+25:01
+and then give it an id equals event selector
+25:06
+wrapper. So we will specify this id for this div which is event selector
+25:12
+wrapper. And then inside this div we will create a label label and then
+25:19
+put / label element and then and then we will
+25:24
+specify a four a four attribute for this label tag as event selector. event
+25:32
+selector and then inside this label element we will use the strong element strong to
+25:38
+make the text strong and bold and let's write in here select event.
+25:44
+So this select element this select event will help us to select which event do
+25:53
+you want to edit or delete. So when you have multiple events in the same day you
+26:00
+and you want to edit an event which event do you want to edit? So you can
+26:05
+choose from this select element. So we can go select this is select element in
+26:10
+HTML. It's a nice element that helps you to select one element from multiple from
+26:16
+multiple elements. And then we have to specify the ID ID as event selector.
+26:24
+Event selector. Notice notice capital S. And then when when we reach the
+26:31
+JavaScript section, we will create a function that we can invoke in here. On change on the change event, we can
+26:40
+invoke invoke a function which is handle called handle event selection. But this
+26:47
+will be later on when we reach the JavaScript section when we when we create that function.
+26:54
+Currently we inside this select element we will create an option element option and then
+27:00
+slash option. This option element will be disabled. Disabled. We'll give it the attribute or
+27:08
+the property disabled to be disabled. And then we will give it the property selected. You want it to be selected by
+27:16
+default. And then let's write in here choose event.
+27:22
+Choose event and then dot dot. Now we have finished this section of the
+27:29
+select element. We can move on to the next section. Notice after this div, we
+27:35
+will create another section as main form. Main form. This is the main form
+27:41
+section. the main form section and this form will contain the inputs that we can
+27:48
+insert new appointment or edit an an existing appointment. Okay. So now let's
+27:54
+go form and this form element will have the attribute method as post. We need to
+28:02
+set the method attribute or property as post to send the data in the post mode
+28:08
+or in the post action. and then id equals event form.
+28:16
+This form element inside it I will create an input element of type of type
+28:23
+text or actually I will make the type as hidden. So we need this input to be
+28:29
+hidden. Okay, this input should be hidden will not be visible to the user.
+28:35
+But this input will contain a name property of action. So what is the type
+28:41
+of action that I want to perform on the calendar? This input will inform me
+28:47
+later on when we uh reach the PHP section, the PHP section which action
+28:53
+should uh should we perform on the calendar. By default it will be add. It will be
+28:59
+add add action. So it will be insert action. So we will set the value as add.
+29:06
+And then we have to specify an ID attribute as form action.
+29:14
+After this input element I will create another input element of type hidden. So let's make the type as hidden. So input
+29:22
+element of type hidden and then the name of it will be event dash ID and then
+29:29
+let's create an ID attribute of event event
+29:35
+or event I capital I event ID. So the ID attribute here is event ID name event
+29:45
+ID. And now let's create a label. Let's create a label element which will have
+29:51
+the four attribute as course name. So course name and then let's write in here
+29:57
+course title. So course title the title of the course
+30:03
+and then type of input of type text. We will create an input of type text as a
+30:10
+text input and then the name of it will be course name course underscore name id
+30:15
+as course name and this input will have to be required
+30:23
+we need to make this input required in order to be provided uh to us to store
+30:28
+it in the database. The next step is we have to create
+30:34
+another label element which have the for as instructor name. So the instructor
+30:39
+name what is the name of the instructor that will explain this course or this
+30:45
+session. And then let's have it as instructor name.
+30:51
+Let's add an input element here of type text. And then set the name attribute
+30:57
+as instructor name. ID equals instructor
+31:03
+instructor name and then let's make this input
+31:09
+required. Let's let's give it the the property required to be required.
+31:16
+The same thing goes for the start date. So I have to create the label element and that that has the four attribute as
+31:24
+start date start date. So this what is the start date of this event of this
+31:31
+task or of this course and then we have to create an input of type date. So this
+31:38
+input has to be of type date. Why? Because this input will be as a uh date
+31:44
+input that you can choose the date, the month and the year that this session or
+31:49
+this course will be on. And then we have to give it the name as start underscore
+31:55
+date and the id should be as start date.
+32:01
+And this input uh also has to be required uh from the
+32:06
+user. We have to get some start date in order to be able to specify when this event starts.
+32:13
+The same thing goes for the end date. So you so we have to give it four the four attribute as end date and then write in
+32:21
+here end date. So you will notice a pattern in here that always the the
+32:28
+value of the four attribute matches the value of the ID.
+32:34
+The the value for the four attribute must match the value of the ID. Why?
+32:39
+Because when we click on the on this label, we want the browser to automatically select or focus on the
+32:47
+input. Later when we browse the page, I will show you that when we click on this
+32:53
+label, it will focus on the input by default. Why? Because we are matching up
+32:58
+the value of the four attribute with the value of the ID attribute. This has to be matched. The name doesn't doesn't
+33:06
+have to match them but uh it's good to have uh explainable and it's best
+33:13
+practice to name the name attribute as uh really good names for you in future
+33:20
+to understand what this input gets from the user. So let's do an input element
+33:26
+here of type date and then give it name as end underscore date. As as you'll
+33:32
+notice this type of naming is really good for for us for for future us when
+33:39
+we return back to this code maybe after 6 months you will you will understand
+33:44
+immediately what this input receives from the user and the ID attribute has
+33:50
+to match up with this value. So we have to copy and paste this value in here
+33:56
+otherwise it will not focus on the input. And then we have to make the this input required uh to be required uh in
+34:05
+order the user has to uh has to provide us with end date for us to be able to
+34:11
+specify when this session starts and when this session ends or when this when
+34:17
+this task starts and and when this start task ends. The last thing here we need
+34:23
+to do is a button. We have to create a button that will be of type and equals
+34:29
+submit. So this button of type submit to submit this form. And then let's
+34:35
+add an icon here for save or preserve.
+34:43
+Let's go save or it doesn't matter not important.
+34:48
+Let's write in here save and then slashton. So now we have a button that
+34:54
+will allow us to to save and submit this form and then we will receive the data
+34:59
+that's being sent from this form by a PHP script later. I will create it and
+35:05
+then we will send this data and store it in the database in myq in MySQL database
+35:11
+and then we can we can we we will be able to fetch this data and display it
+35:17
+on the calendar grid. So I think we have finished now the HTML section
+35:23
+correctly. We can now uh the last thing we can create a delete form. So let's
+35:30
+create a section for the delete form before we finish this section. So we
+35:36
+have to create a form to delete this session or delete to delete this task or
+35:42
+delete the the task or event. So form of type of method that has a method
+35:49
+attribute method equals post notice capital letters post and then the
+35:55
+onsubmit onsubmit when we submit this form I want to return return the
+36:03
+function confirm. So the function confirm in JavaScript specifically in
+36:08
+the bomb object which is browser object model. This bomb JavaScript has a
+36:17
+function called confirm. Confirm will show us in the browser a confirmation
+36:24
+message that will confirm. Do you are you sure you want to delete this? So are
+36:29
+you sure you want you want to delete this task or this
+36:36
+event? So we are asking the user are you sure you want to delete this event? If yes or
+36:43
+to delete this appointment let's name it appointment. If yes he wants to delete it and he he
+36:51
+is sure he want to delete it. We can go ahead and delete this task or event. So
+36:58
+inside this form we will create an input of type equals
+37:06
+input of type equals hidden. So this input must be hidden. This input will
+37:11
+contain this information which is name equals equals action. So the type the
+37:17
+type of action and then value equals delete. So the action we are trying to
+37:24
+do in here is deleting action. we we want to delete a task or event from the
+37:31
+calendar. So we have to specify the value of this input element as delete.
+37:37
+Then we have to spec to create another to create we have to create another input element of type hidden and this
+37:44
+input will also be event id. So what is the id of the event that we want to
+37:50
+delete? We have to specify ID as delete
+37:56
+event ID. And then lastly, we will have a button of type equals submit.
+38:06
+And then let's spec let's specify class as submit btn. Then and let's put here
+38:12
+an icon of for example bin. Yes, this this is the icon. So, bin icon and then
+38:20
+write in here delete. Delete this event.
+38:26
+The last thing here I want to add is let's write a comment in here. Let's put
+38:32
+an X icon X icon and then cancel. So, what if
+38:39
+we want what if you we wanted to cancel uh any the procedures that we have clicked on. So when when we click on
+38:46
+this model for edit add and delete it will show up a model it will pop up a
+38:51
+model and if we don't want to add or edit or delete we may want to cancel the
+38:57
+procedures. So we can go ahead and put a button specified or dedicate or dedicated to this action which is
+39:05
+cancelling action specify type equals button. So the type of this button will
+39:11
+be a normal button and then on click when we click on this button later on as
+39:17
+I said in the JavaScript section we will create a function that will close model.
+39:23
+So let's keep that for the JavaScript section. When we reach the JS section we will create these functions and we will
+39:30
+come back in this HTML and inject the onclick attributes for each element that
+39:37
+needs to be called. Okay. and then because otherwise it will error up it
+39:42
+will error it will error out out because we don't have these functions uh now in
+39:48
+uh now in this time and then let's specify a class attribute as submit-bn
+39:57
+and also we have also to uh write something in here as for example
+40:05
+let's uh put a comment of x and let's right in here. Cancel.
+40:13
+So with that being said, I believe now we have finished all the sections for
+40:19
+this for this HTML section or all all the codes. Now we can move on to the
+40:25
+next section which is CSS. Uh but if you wanted to just lastly link
+40:32
+to a script, link to a JavaScript file, we can go script
+40:40
+and then slashcript and let's specify src as calendar.js.
+40:48
+And let's create this file now as we have done with the CSS. Let's create a file called calendar.js.
+40:56
+And this file will contain some JS. So now let's make sure that we have these
+41:03
+we have these I think we have to rise the button
+41:08
+inside the div elements of this section. So I think this button and this form we
+41:15
+have closed the module area. So let's take the /ash div from here.
+41:26
+We have a calendar section calendar and then slashde
+41:32
+div id event selector wrapper and then we have
+41:39
+div class model. Yeah, we have forgotten to create this.
+41:44
+We have to create a div in here. div class equals model and then id equals
+41:50
+event model. And then inside this div we have to create another div which is which which
+41:58
+has the class mod-content. And then inside inside these two divs we
+42:05
+can put our code like that. Yeah. And now we can close these two divs right
+42:12
+here after the button. We we must close these two divs. Okay. So this is a
+42:18
+really important step that I have missed. We have to create two divs
+42:24
+before the event selector wrapper. One div has the class model and also the id
+42:30
+event model. Notice capital m and inside it there's another div which has the
+42:37
+class modal dash content. These two divs will be closed right below the this
+42:44
+cancel button. Why? Because all of this content will be contained. All this
+42:50
+content, the button, the cancel button, the delete form and also the edit form
+42:55
+and also the add form will all be contained contained or will all be
+43:01
+within this model that will pop up. So we have to create these two divs. Really
+43:06
+important. Okay, really important tip. And then we have to close them right before the script and also right below
+43:13
+the button. So once we close this button, we have to close these two divs. So now we have finished all the HTML
+CSS Styling: Responsive & Modern UI Design
+43:20
+section. Meet you in the next section where we will be coding CSS.
+43:27
+Welcome back. In this section, we will continue writing our CSS code. So the
+43:33
+first element is root. We will set some colors to use later
+43:41
+when we when we want to color uh our elements. So the first color is dash
+43:48
+primary. So the primary color will be as
+43:56
+three uh 6B8 to F6 and then primary dash
+44:01
+light
+44:08
+and then as DB B E A F E I think this
+44:14
+has to be three and then we will set primary duck
+44:19
+primary dash duck as 1 e 3 a 8 a dash background. So the the
+44:30
+color of the background will be f9 fa fb.
+44:40
+I think this has to be a one
+44:45
+d uh one e
+44:51
+and then 3 a 8a. Yeah. And then we have to set the the color of the success
+44:56
+message to be as d 1 fa e5. So when we
+45:02
+do some operations like adding a new appointment or editing an existing appointment or deleting an appointment
+45:09
+and that operation uh happened successfully, we want to to to show a
+45:15
+message a success message and we want to color we want to color that message as a
+45:22
+success message. So the color of the success operation will be as D1 F AE5
+45:29
+and then dash dash success dash text will be as 06
+45:37
+5 F46. So this is the color of the of the text
+45:43
+of the message of the success message and then the the color of the error message will be as fe E2E2
+45:54
+and then also the the color of the error text. So the color of the text of the
+46:00
+error message will be as B # B9 1 C1 C. So now we have finished all of
+46:10
+the colors that we will use across our CSS stylesheet.
+46:16
+We will set the margin of all elements as zero as well as the padding as zero.
+46:23
+And also we will set the box sizing as border box. And these are best
+46:29
+practices. You will notice across many different stylesheets in the internet or
+46:35
+in GitHub. All you all of them uses or use this kind of elements margin zero,
+46:42
+padding zero and box sizing, border box because we want to set these elements to
+46:48
+the default uh so that HTML elements uh go in the default behavior. For example,
+46:55
+the headings and the inputs don't have a margin, don't have padding. We will we
+47:01
+we will set the margin and padding ourselves. The next step is the body. We will style
+47:08
+the body section. Font dash family. I will use the font family. Enter.
+47:15
+And as as a backup font, we will use sand serif.
+47:20
+Right now I have this font. Okay. So I have this font in my clipboard. I will
+47:27
+paste it in the head section. So now I am in the PHP or HTML file. I will paste
+47:34
+this CDN link for the font family. Enter in here. You can you can notice that the
+47:41
+weight is 400 600 700 and display equals
+47:47
+swap. So if you want this font, you can get it from the Google Google fonts. You
+47:52
+can go Google Google fonts and then you can search in here for the
+48:00
+inter enter inter font. So you can notice that we have this font
+48:06
+and you can choose whatever font you have whatever font you want. For
+48:11
+example, if you want this font, you can go to here and then get font and you can get this font using which way you you
+48:19
+want whether it was link or import whether you want it the import version
+48:24
+or link version. Okay, right now I have pasted my C link in
+48:30
+here. Why? Because I want to use the font as enter. So font family as the
+48:36
+font enter and then the background color I will set a background color for the body as
+48:44
+variable and I will set it set it as dash background and then the color of
+48:52
+the body will be hash 333 and also I will set the line height as 1.6. So
+48:59
+these are uh these are the styling elements for the body. Font family enter
+49:04
+background color. We have used this variable background which is this color.
+49:09
+So we will we will set the background color for the body as this color and
+49:15
+also the color the color the text color will be as 333 and then the line height
+49:22
+1.6. Now let's move on to the header section. The header section will have the
+49:29
+background as a variable which is as primary the color primary and then the
+49:35
+color will be white. I will set the color of the header to be white padding
+49:41
+two rim and then one rim. I will add padding from the top side and bottom
+49:47
+side as two rims and from the left and right sides as one rim. And then I will
+49:54
+set the text align as center. Now if you save these changes and go into our HTML
+50:00
+page, you will you will notice that we have styled our header section correctly in this way.
+50:08
+After we have finished our header section, we can move on to the clock section. So let let's write here clock.
+50:16
+So the clock section will have these uh these elements clock container the
+50:23
+background as variable of primary light. So I will use primary light variable and
+50:29
+then color I will use the variable primary dark primary dark- dark. So this
+50:35
+is the the purpose of setting some variables. You don't have to memorize these colors over and over. You set them
+50:43
+at the start of the file and then you use you refer back to the variable names.
+50:49
+And then I will set the font size to be as two rim to make the font bigger. And
+50:55
+then the font weight to be bold to make the font bolder. And then padding one
+51:00
+rim. And then also I will set the text align as center. And then font dash
+51:07
+family I will set it as enter. The font enter.
+51:12
+and then comma sans surf sans-surf and then the letter spacing I will add some
+51:18
+letter spacing to the clock container as two pixel and then border border dash
+51:25
+bottom I will add a border bottom two pixel solid
+51:31
+and then I will use the color of primary so now if you notice this clock container it will be
+51:39
+like this so this is the clock container and now we will add some media query for
+51:45
+it to make the clock container responsive. So media and then max dash
+51:51
+width I will set the max width as 768
+51:57
+768 pixels. So the maximum width of the of the device screen of the screen size
+52:04
+will be 768. So every single device uh screen equal
+52:11
+to this or less we will set the clock container to be as the font size I will
+52:19
+make it smaller. So rather than being the font size as two rim I will make it
+52:25
+1.4 4 rim to make the font smaller and then the padding I will set it as 0.75
+52:33
+from all directions from the top left bottom right. Okay. So these are important for uh
+52:42
+responsiveness purposes. Now we have finished our clock. You may
+52:47
+have the question why don't we have a clock running into here? Because we haven't reached the JavaScript section.
+52:54
+When we reach JavaScript, we will create a function that will make this clock
+52:59
+work and make this clock counts further. Now we can go to the calendar section
+53:07
+calendar container. In the calendar, in the calendar
+53:13
+container, I will set dot calendar the class calendar
+53:20
+to have a max width of 1,000 pixel and also margin from the top and bottom as
+53:27
+two rim and auto from the right and left sides. background as white
+53:36
+and then also padding 1.5 rim border dash radius I will add border radius by
+53:43
+10 pixels amount and then box dash shadow we will add box shadow as 04
+53:50
+pixel and then 10 pixel the spread and then rgba I will set the red green blue
+53:57
+alpha channels as 0 0 and then 0.1 one.
+54:02
+So these are uh the calendar section effects. You will notice that now we have this
+54:09
+section. It has a max width of 1,000 pixels. If we
+54:17
+open the console and then go to here, you will notice that these styles have gone to the calendar div. So now
+54:23
+calendar, if you go to here, the same styles we have wrote are now in here. Max width. So the calendar we have max
+54:31
+width of 1,000. If you if we cancel this attribute it will be maximum width of
+54:37
+100%. But if we set the max width as 1,000 it will be in this looking in this
+54:43
+looking div. Okay. The margin will have two rim. So two rim from top and bottom.
+54:49
+So you notice that top and bottom have two rim. And from the left and and right
+54:54
+we have auto background as white. We have the background here white and we
+54:59
+have the shadow effect. So without shadow effect it will not be visible but
+55:05
+with the shadow effect it it shows up it rises up. Okay. After the calendar
+55:11
+section we will move on to the navbtn container. So navbtn container dash
+55:18
+container. So this container contains we have uh coded it in the last section. We
+55:24
+have this nav btn container which is a div that contains two buttons and these
+55:29
+two buttons are the next button and the previous button. So we have two buttons
+55:35
+that will navigate uh through or across the months.
+55:40
+Now let's style the container of it. So display flex we will make the display of them as flex. Why flex? Because we want
+55:47
+them to be in a flex order. And then justify dash content. I will justify the
+55:52
+content as space dash between space between. So now you'll notice that we
+55:58
+have display flex. So the now they are in a row in row flex and then the the
+56:05
+justify content as space between. You can specify it to be as space dash
+56:11
+around will have some space around them. You'll notice that they will have some
+56:16
+space around them. So now they will have some space around the boxes. So you can
+56:22
+set this property to whatever you want. It's called justify-content and I will specify it as space dash
+56:31
+between. So I want the space to be between them, not around them like that.
+56:37
+After it we will have align items. Align dash items to be center. So we want to
+56:43
+center them and then margin-bottom as one rim.
+56:48
+like that. Like that. Next we will move on to the navbtn itself. Now we will
+56:55
+style these buttons themselves. So let's go ahead. We can go dotn navbtn
+57:02
+nav-bn. A dot is used to select an element using
+57:07
+a class. So font size is 1.5 rem. And then we will specify the background as
+57:14
+none. We don't want a background. Okay, we don't want a background for these
+57:19
+buttons. And ne and next we will specify border as none. And also the cursor. We
+57:25
+want the cursor to be pointer. Currently the cursor is a normal cursor.
+57:32
+We want them to be a pointer. Okay. So let's make the cursor as pointer.
+57:37
+Pointer. And also we will use a color of variable. We'll use a variable of primary dash duck. Okay. Now if we
+57:47
+reload this page, you'll have now we have a cursor as pointer and they don't
+57:52
+have background or poda anymore. Now we will move on to the dot calendar
+57:59
+grid. So let's now style the calendar grid section. We have
+58:04
+to set this element the display of this element as display grid. So now we will
+58:11
+specify the display property as grid to be in a grid fashion because the calendar cells will be in a grid fashion
+58:18
+and then grid-template dash columns which is a really important
+58:24
+uh property. We will call the function repeat
+58:30
+and then we will put seven comma one fraction one frs
+58:35
+fraction. So display grid and display flex are two of the uh new CSS
+58:41
+attributes and we are using them here to uh to adjust the the displaying of our
+58:46
+elements in our HTML page. And then the gap of this element will be as 10 pixel.
+58:53
+Okay. So this this is the calendar grid. Next I will specify some specify a media
+58:59
+query here for responsiveness purposes. So let's go here. Let's put a comment in
+59:04
+here. mobile grid. So media at
+59:14
+media and then max dash width as 1 to4
+59:20
+pixel. So the maximum screen width uh is
+59:25
+1,024 pixels. We want to style the dot calendar grid to be as display flex. We
+59:34
+want to adjust the display from grid to be as flex. In mobile devices, we want
+59:39
+to be them as flex. So to be in a row fashion and then flex- wrap, this is
+59:45
+this is an important property to be no to to be no wrap. No wrap. So uh so for
+59:52
+it to be as scrollable, we want the elements to be scrollable and no wrap.
+59:57
+There's no wrap because wrap will make them as cards. cards. When you uh resize
+1:00:03
+the the screen, the cards will go under each other. No, we don't want we don't
+1:00:08
+want them to be in a column fashion. We want them to be we want them to be in a row fashion. So, we specify flex wrap
+1:00:16
+property as no wrap. Overflow- x will be as auto. So, specify
+1:00:23
+the overflow x property as auto. and then scroll dash snab dash type x and
+1:00:32
+then mandatory mandatory. So this property is really important because we
+1:00:37
+want to we want the calendar cells to be scrollable to be scrollable. So we have
+1:00:44
+to set scroll dash snap dash type x. So we want to scroll across the x-axis and
+1:00:52
+it's mandatory gap as 10 pixel. Okay. So this is for uh
+1:00:59
+mobile devices for mobile and tablet devices
+1:01:04
+for responsiveness purposes. Then I will uh we will do for day and
+1:01:10
+day name. Later we will have some day, day name
+1:01:17
+classes and then we will specify the minimum width to be as 140 pixels. Flex
+1:01:23
+dash shrink as zero and then scroll scroll dash snap
+1:01:31
+scroll dash snap dash align as start. Okay,
+1:01:39
+now we have finished our media query for this media. We have finished the coding for this media. So we have add media.
+1:01:46
+Media helps us uh run code or run CSS code for a specific device screen sizes.
+1:01:53
+We have set the device to be as 124 pixels. We have changed the display mode
+1:01:59
+for the candy grid from display grid to display flex and then set the flex the
+1:02:05
+flex wrap as no wrap the overflow x to be as auto and then
+1:02:11
+scroll- snap dash type across the x-axis and then specify here mandatory gap of
+1:02:19
+of 10 pixel. So the gap between each element will be 10 pixels. And also the
+1:02:24
+same for the day and day name. We want the minimum width to be 140 pixels. Flex
+1:02:29
+dash rink zero. And then scroll snap align start. After this media I will set
+1:02:37
+the dot day and also the dot day-name classes to have the text align center
+1:02:46
+and then dot day individually. I want to select the day the individual day class
+1:02:52
+and then specify the background to be background to be as hash FFF.
+1:02:58
+The border of the day will be as one pixel solid # E5 E7 EB and then the
+1:03:06
+border dash size I think this will be E5 E5 this this
+1:03:15
+should be E5 E7 EB and then the border radius border radius as 6 pixels. So we
+1:03:23
+want to uh make a radius effect on the border by the amount of six pixels and
+1:03:30
+then minimum dash height one uh 100 pixels minimum height 100 pixels padding
+1:03:38
+8 pixels and then the display display as flex
+1:03:45
+flex dash direction flex direction as column. So we want it to to be displayed
+1:03:51
+in a column fashion and then justify dash content as flex start. Also we want
+1:03:59
+to set the justifi uh the position position
+1:04:04
+property to be relative. So I want the position of this element to be in a
+1:04:09
+relative mode. The cursor should be pointer. So cursor should be pointer.
+1:04:15
+And then transition we will specify a transition property for it for the
+1:04:21
+background just for the background by the by the duration 2 seconds and then
+1:04:28
+the effect will be ease. So here we have finished the day
+1:04:34
+attributes. Uh the most important thing here is display flex flex direction as
+1:04:40
+column and then justify content as flex starts. After we have finished the day
+1:04:45
+attribute, we will go into the day hava. So let's add a hava effect for the day
+1:04:52
+day and then choose the hava effect. I will set the background the background
+1:04:57
+to be as f3 f4 f6. So a kind kind of a a
+1:05:04
+a degree of the white colors and then do day dot today class today as
+1:05:11
+background background variable I will use a variable of primary dash light so
+1:05:19
+this color and then border dash color the color of the border will be as variable of d- primary dash duck
+1:05:29
+and then dot date number. I will uh style the date- number element to be
+1:05:36
+font weight bold margin-bottom. We will set the margin bottom. We will
+1:05:42
+add some margin from from the top from the bottom side by the amount five
+1:05:47
+pixels. Also, I want to style the event element to have a
+1:05:54
+background using a variable of this color primary the primary color. Set the
+1:06:00
+color to be white. And then padding. I will add padding of three pixels and six
+1:06:05
+pixels from the top and and top and bottom sides as 3 pixels. And from the
+1:06:11
+left and right sides as 6 pixels, border dash radius as 4 pixels,
+1:06:18
+margin- top as 4 pixels. And also we will add some font size by 14 pixels.
+1:06:26
+And then cursor pointer. We will adjust the cursor to be a pointer cursor. And
+1:06:32
+then lastly, we will add a transition uh transform of 0.2 seconds as is.
+1:06:42
+And then we will go ahead and
+1:06:47
+put an event hover effect here transform. So the transform property in
+1:06:53
+the CSS uh it's kind of a a transform property that transforms the element.
+1:06:58
+You can use scale of 0 1.03.
+1:07:03
+So we want to make the element bigger. If you scale by one, it will be the same
+1:07:08
+size as the element. If you scale it to a number low that is low than or lower
+1:07:15
+than one, for example, 0.5, it will make the element half its size. But if you
+1:07:21
+make it 1.5, it will make the element uh half more than the size than the
+1:07:27
+original size of the the of the element. So in this case, I will make it 1.03.
+1:07:32
+Okay. So scale it will scale the element and then let's go into the alert into
+1:07:38
+the alert boxes. So let's let's style the alert boxes. Let's go dot alert.
+1:07:44
+Let's give it a max width of 600 pixels. 600 pixels. and then margin one rim uh
+1:07:53
+auto padding as one rim. So alert will be the alert that will be showed after
+1:07:59
+we do an operation. After we add a new appointment or edit an existing appointment, it will show an alert that
+1:08:06
+tells us whether it was successful or it wasn't successful. So this alert will be
+1:08:12
+uh the alert that is being showed after we do an operation. border dash radius
+1:08:18
+by 6 pixel and then text dash align center and we have to set the font
+1:08:24
+weight to be bold. Font-weight an important property as bold.
+1:08:31
+After we have finished this alert this this generic alert element let's style
+1:08:38
+the success alert. The success alert will will be the same as the original
+1:08:44
+alert but just uh but just have the background as variable of dash success.
+1:08:52
+This color we have set way up in the file. This success variable and and also
+1:08:58
+we will set the the color to be as the variable of success dash text. So you
+1:09:07
+have another variable called success text. So this alert will be a generic alert
+1:09:13
+that has a max width, margin, padding, proto size but the success message when
+1:09:20
+the alert is a success message we will make the background as success and the color as success text. When the alert is
+1:09:27
+a error error message we will set the the back the background as variable dash
+1:09:34
+error and then we will set the color property to be as variable dash error
+1:09:42
+error dash text. Okay.
+1:09:47
+Now let's move on to the model popup. So the model popup
+1:09:52
+model popup is the model that will be showed when we click on the edit or add
+1:10:00
+button. So when when we click on add or edit button it will show up or pop up a model window and this model will have
+1:10:09
+these these attributes dot model position as fixed. We will set the
+1:10:15
+position as fixed and then also the inset insert as zero display I will make
+1:10:23
+the the the default display of it as none. So we have to make the model none.
+1:10:28
+The display of the model as none by default align items
+1:10:34
+center. So the model so this model will not show up until the user clicks on a
+1:10:39
+button. Until the user clicks on the edit or add button it will be uh shown. Otherwise it will not be shown
+1:10:47
+and then justify dash content center also we have to specify the background
+1:10:54
+as rgba 0 0 0 comma 0.5 so R red G green B blue
+1:11:02
+and A stands for alpha alpha controls the transparency of the color and then
+1:11:08
+zindex this zindex property controls the the the layering the layering order, the
+1:11:15
+order of the layers or the order of the elements. Uh which element do you want to show above which element? So now we
+1:11:22
+will set it as 9999 for for the model. Why? Because we want the model to show above all sections.
+1:11:31
+Okay. Next we'll have we will have to specify modal content element
+1:11:37
+mod-content and give it background as white
+1:11:42
+padding as two rim. So the padding as two rims from all sides and then border-
+1:11:48
+radius dash radius as 10 pixel by the amount of 10 pixel and then maximum dash
+1:11:55
+width max width as 420 pixels 420 pixels
+1:12:02
+and then we will set the width to be 100%.
+1:12:08
+And also the box dash shadow we will give it a shadow a shadow effect of zero
+1:12:14
+8 pixels and then 20 pixels and then rgba of 0 0 and then 0.2.
+1:12:25
+Next we will move on to the mod-content d uh label. So model dashc content and
+1:12:31
+then inside this element we will have an element of label label which is the
+1:12:37
+label of the of the of the inputs. Here we have some labels here of the inputs.
+1:12:43
+These labels we want to style them to be as width
+1:12:49
+100% and then padding 10 pixel font size
+1:12:54
+font dash size one rim border as 1 pixel solid #ctc
+1:13:03
+and then border- radius we will give it radius by amount five pixels.
+1:13:14
+So I think we have to set the display display display
+1:13:19
+to be block here and also font dashweight to be bold and also we have
+1:13:26
+to set margin dashbottom to be one rim and then we have to to specify
+1:13:33
+margin-bottom to be as six pixel and I think these properties properties are not meant for
+1:13:40
+the label itself but these pro these properties we will add for the input. So
+1:13:46
+let's go now model-ash content and then choose input.
+1:13:52
+So the input will have these attributes width 100% padding 10 pixels font size
+1:13:59
+one rim border as one pixel solid hash ccc and then border radius as 5 pixels
+1:14:06
+whereas the label will have display block to to be displayed in a block fashion and then font weight bold
+1:14:15
+also margin from the top side as one rim and margin from the bottom side as six
+1:14:21
+pixels. But the input will have these attributes. Okay. So we have to move on to the model
+1:14:29
+content button. So now dot model content-content and then choose button element. This
+1:14:36
+button element will have margin- top as one rim and then padding 10 pixels 10
+1:14:45
+pixels from all the sides. width as 100%. And then border as none
+1:14:53
+as none border dash radius. So the amount of rad of of radius will be as
+1:14:59
+six pixels and then font dash size one rim cursor cursor as pointer. So we have
+1:15:08
+to set the cursor to be as pointer font size one rim border radius 6 pixels and
+1:15:14
+border should be none. Okay, these are important uh properties for the button.
+1:15:19
+We have to make the border none. To make the border none, border radius 6 pixels
+1:15:24
+and then font size one one rim. Now let's choose a specific type of the
+1:15:31
+buttons which is the submit button by going model-ash content and then choose
+1:15:38
+the button element and then specify in square brackets the type of the button
+1:15:45
+to be equal submit. When the type of the button is submit go ahead and give it
+1:15:52
+these styles. First of all, first of all the background
+1:15:57
+background dash color as variable which is dash
+1:16:04
+primary and then the color should be white. So we have to make the background
+1:16:10
+color as a primary color but but the color of the text of the button should
+1:16:17
+be white. dots dashbtn. The same thing here we
+1:16:23
+have to make the background dash color as this color crimson crimson
+1:16:30
+color which is kind of a a reddish color and then color as white or hash fff if
+1:16:38
+you want to use the uh the hash system.
+1:16:45
+Let's go ahead and style the modal dash content and then choose the button last
+1:16:51
+dash child. So we want to select this is a selector in CSS. If you want to select
+1:16:58
+the last child uh the last child button from the modal content, you can go
+1:17:04
+mod-ash content and then space and then choose button put a semicolon and then
+1:17:10
+choose last child and then we can go and specify the background color as E5 E7 EB
+1:17:21
+semicolon and then the color as h# 333
+1:17:27
+Now let's style the drop-own menu by going drop-down dropdown
+1:17:32
+for multiple events. So now we will style the dropdowns for multiple events. hashevent
+1:17:41
+selector we will go and
+1:17:46
+give it width as 100%. So a full width, width as 100%. And then padding as 10
+1:17:54
+pixels from all sides, font size as one rim, one rim, and then margin- top. The
+1:18:02
+top margin as one dash one rem. And then margin bottom margin dash
+1:18:09
+bottom as one rem. And then we can specify border dash radius to be as five
+1:18:16
+pixels. and also now border one pixel solid hash ccc. Okay.
+1:18:25
+Now let's specify the day overlay. When we hover over a day, we want to show an
+1:18:31
+overlay hover or or overlay effect that will show two buttons add and edit. So overlay, let's
+1:18:40
+put a icon for the check mark. Check mark.
+1:18:46
+Overlay overlay buttons logic
+1:18:53
+or CSS logic CSS logic. Now let's go and style it by going dot
+1:19:01
+day dash overlay. This overlay should have position absolute position as
+1:19:07
+absolute. And then we have to go top six pixels
+1:19:12
+right six pixels from the from the right section and then display as none. We
+1:19:18
+want to make it none. It's it's it's display as none. And then flex dash
+1:19:24
+direction column column gap as four pixels and zindex as two to make it
+1:19:33
+appear uh above the cell. And then we will specif we will specify day hover
+1:19:39
+effect comma or day hover. When we hover over day over the day element we want to
+1:19:46
+select another element which is day- overlay. This is a complex way of
+1:19:51
+selecting elements. When we hover over this element I will want I want to
+1:19:57
+select this element and do something on this element. when we hover on this element. Okay. So, make the display as
+1:20:06
+flex. We want to to make the display as flex.
+1:20:12
+And then I want to select the overlay button by going overlay overlay-bn
+1:20:19
+background background property. I want to use a variable of primary dash
+1:20:26
+dark and then color as white. And also I want to set the padding four pixels from
+1:20:32
+top and bottom. And also eight pixels from the right and left size. From from
+1:20:38
+top and bottom I want to set four pixels. And from left and right 8 pixels.
+1:20:44
+Font size as 12 pixels. 12 pixels. And then the border should be none. And
+1:20:52
+also the border radius 4 pixels. And then also the cursor cursor pointer.
+1:20:58
+Let's make the cursor as pointer and then transition. We will set transition
+1:21:05
+property to be background 0.2 seconds ease. So I want to
+1:21:11
+transition uh the the effect of background by the duration of 2 seconds
+1:21:18
+and make the effect as is. Last the last thing in here in this
+1:21:25
+section CSS section will be overlay-bn hover and then we will set the
+1:21:32
+background color to be a variable using the variable primary
+1:21:38
+the background color or the background if you want a shorthand version. So now
+1:21:44
+congratulations we have finished the CSS section correctly. I believe now this
+1:21:50
+will make the styling of our uh style of our page look nice. Yep. And it's like
+1:21:57
+that. You will notice that some elements have been uh have been ignored or have
+1:22:03
+been uh uh disappeared. Why? Because we have set display
+1:22:10
+as none. As you notice display none. We want to show a model when we hover hover
+1:22:16
+over the days or sales. In the next section, we will dive into the
+1:22:22
+JavaScript section where we will create the logic that will loop through the cells and then create some elements in
+1:22:29
+here, create some divs and then you will notice that when we click on some cell,
+1:22:34
+it will show up a model that will add an appointment or add a new task or event.
+1:22:40
+And when we have a day that has existing events, we will have over it and it will
+1:22:46
+show an overlay which we have styled in this section. This section overlay we
+1:22:52
+have created a nice overlay that will show up edit and add buttons. When we click on those buttons, it will show up
+1:22:59
+a model that will edit or delete existing events or tasks or or tasks. So meet you
+️ Database Setup: MySQL Schema & PHP Connection
+1:23:07
+in the next section. Welcome back. In this section, we will dive into PHP
+1:23:14
+code. So, let's create a file called calendar calendar.php.
+1:23:22
+And then let's go ahead and start a PHP tag like this exclamation uh a bigger
+1:23:30
+than notation and then question mark and then PHP. Okay. Now let's go ahead and first
+1:23:38
+of all uh create a file called connection connection that will connect
+1:23:45
+to the database. If you go to the connection file it will
+1:23:51
+be as a emptyp file. Let's start a PHP tag like this and then put a comment one
+1:23:59
+connect. We will connect to local MySQL
+1:24:05
+server using examp
+1:24:16
+whatever server you have currently I am using examp uh whatever server you have we will
+1:24:22
+connect locally to my SQL server. First of all, I will create a variable called
+1:24:28
+connection equals new. Then the keyword new. I will create a new instance, a new
+1:24:35
+object of the class or or of the function MySQL
+1:24:40
+I MySQL or MySQL. This is a function in PHP language. And then we have to pass
+1:24:47
+in some parameters. First of all, local host because now we are uh on the local
+1:24:55
+host and then we have to pass in here the username username. We will pass here
+1:25:01
+root. So currently the username is root. You can specify it in a variable. You
+1:25:07
+can go and create username variable equals root and then you can refer to
+1:25:13
+this variable by using username like that or you could pass it
+1:25:18
+straightforward whatever way you prefer you can choose it's up to you and then the password is nothing
+1:25:26
+we are on the local host I don't have password currently uh to access a database and then we will create a uh
+1:25:34
+database called course _ calendar I will connect to this database. Okay, the next
+1:25:40
+step is connection and then I will go ahead and call this method which is set
+1:25:47
+character set character set set car set as UTF8 MB4.
+1:25:56
+Now I will access the PHP myadmin by going to the localhost
+1:26:01
+slashphpmyadmin. it will redirect me to PHP my admin tool
+1:26:08
+on the local host and then I can create a new database. Uh currently I have a database here
+1:26:15
+called course calendar. I have created uh previously which has this kind of
+1:26:22
+structure ID, course name, instructor name, start date, end date and then
+1:26:28
+created at uh what you will do is you will have to create a column called ID
+1:26:35
+of this type. Okay. Of this type integer 11 course name variable character 255
+1:26:43
+instructor name var which is variable character meaning a variable amount of
+1:26:49
+characters of 255 and then start date end date and then create at or let's in
+1:26:56
+this let's in this course or let's in this uh video create this database by
+1:27:02
+going localhost and then open a new PHP my admin tab and then I will create a
+1:27:08
+new database called for example calendar calendar and then set its uh it's as uh
+1:27:18
+its uni code as UTF8 MP4 general C and then let's click on create. Now it it
+1:27:25
+has created a new database called calendar. So you can notice this is a new DB a new database called calendar. I
+1:27:34
+will create a table here called calendar
+1:27:40
+appointments or let's make it short. Let's call it appointments.
+1:27:47
+Appointments. And then the number of columns here 1 2 3 4 5 6. So we have six
+1:27:55
+columns. Let's go and put six. Create.
+1:28:01
+Now let's name these columns. We have id, we have to set the type of id column
+1:28:06
+as integer and the length as 11 and then we have to uh set it to be auto
+1:28:14
+incremented. So this is a really important attribute. We have to set it as auto incremented and it uh once you
+1:28:22
+set it as auto incremented it will become a primary key. So the ID column
+1:28:28
+as you notice it's a primary key. It has this icon of primary key and then the
+1:28:34
+next column as course name. So what is the name of the course? Course underscore name.
+1:28:41
+The type of this column should be variable character var. And then the length should be 255. The third column
+1:28:48
+is instructor name. The name of the instructor. Instructor underscore name.
+1:28:54
+Instructor name as variable character. And then the length as 255. And then
+1:29:01
+start date. You have to specify a start start underscore date as date as type as
+1:29:08
+of type date. If you scroll down here, you will go we have we have some string types. We have some
+1:29:16
+date. We have a date type. Okay. We have a date type. I have to choose date and then end date as date. Also we have to
+1:29:23
+to create a to create a new column called end date as of type date. So date
+1:29:31
+and then the last column is is called created as created underscore as
+1:29:39
+of type date or of type time stamp time stamp.
+1:29:47
+Okay. Now we can click on save and it will save this table. As you can notice
+1:29:54
+there here we have a database called calendar. Inside this database we have a table called appointments. And this
+PHP Logic: Handling Add, Edit, Delete Appointments
+1:30:01
+table appointments have these columns. Now we can go ahead and go back to our
+1:30:09
+calendar. PHP file and write our PHP logic in here. The first thing is we
+1:30:15
+have to include the database connection of this file. We have to include this
+1:30:21
+connection to this file in order to be able to connect to the database and
+1:30:27
+interact with the database. So we have to include the file which is connection
+1:30:33
+connection.php. Why we have to include the connection
+1:30:43
+dotphp file to connect to the database to connect to the database. The second
+1:30:51
+step is we have to create three variables. The first one is success
+1:30:57
+message equals empty string. The second is error message. So these variables
+1:31:02
+will contain the messages whether it was success message it will be contained into here or whether it was error
+1:31:09
+message it will be stored into this variable and so on so on and then events
+1:31:14
+from DB we will return some events or get back when we fetch or when we
+1:31:21
+retrieve or pull the events from the database we will store them in this
+1:31:27
+array. So we will create an empty array here. So, initialize initialize a new
+1:31:34
+array. Initialize or we could write initialize. Initialize a new array to store the fetched events.
+1:31:46
+The next thing here is handle handle add appointment. When we add a new
+1:31:52
+appointment, we want to add some logic here to handle that add add or insert
+1:31:57
+appointment by going if we will create an if condition here and then if server
+1:32:03
+if the server the the the magical variable server in PHP if the server and
+1:32:09
+then then and then the attribute request underscore method it must be capital. So
+1:32:16
+we have to write it in capital letters request method. If the request method
+1:32:22
+equals equals post that means when we send some data from the form if the
+1:32:28
+request method is a post method and by going and operator and and and
+1:32:36
+the post the magical variable post action and the action
+1:32:43
+and the action then put ex uh double exclamation marks
+1:32:48
+uh double question marks string equals equals add and if the post
+1:32:55
+action parameter if it's not empty if this action parameter equals equals
+1:33:03
+equals add then we will do something. So this is an if condition to check that
+1:33:08
+checks or that inspects whether the request method is a post action and also
+1:33:14
+the post action uh property or attribute equals equals equals add. Okay.
+1:33:23
+Then we will do course equals trim. The function trim. We will trim the function
+1:33:30
+trim. Simply uh strip wide space. It will it will trim or cut the wide space
+1:33:37
+or other characters from the beginning and end of a string. And then we will pass into here post. We will get the
+1:33:44
+data post from the magical variable post. And then
+1:33:49
+I will choose the property course name if it's not empty by going double
+1:33:56
+question marks and then empty string. You have to put a semicolon otherwise
+1:34:02
+PHP will cry out or we could use single quotation marks
+1:34:08
+whatever you you you would like. And then instructor variable equals trim the
+1:34:13
+function trim to trim the white space from the beginning and end of strings. and then pass into here the magical
+1:34:20
+variable post and then choose the instructor underscore name and then just put like that
+1:34:30
+thirdly the variable start the start date the starting date I will fetch it
+1:34:36
+or we will retrieve it from them from the variable post underscore post and
+1:34:42
+then we will uh pass into here start and date.
+1:34:50
+The same thing goes into here. And then end equals post
+1:34:55
+end underscore date and then put double question marks
+1:35:01
+empty string. After these variables, after we have gotten these variables, extracted them,
+1:35:08
+after we have extracted these variables from the post variable, we can go and do
+1:35:14
+an if condition. If the course and and instructor instructor and and start the
+1:35:23
+variable start and the variable end. So if these variables exist, if these
+1:35:29
+variables already exist and we have gotten them correctly, then I will
+1:35:34
+create a statement a SQL statement equals connection. This variable is
+1:35:40
+coming from that file. It's coming from is coming from this connection file which is connection. I will connect to
+1:35:48
+this database and then prepare a new statement and then prepare a statement.
+1:35:54
+This statement will be insert into the table appointments which I will
+1:36:00
+copy its name from here. Appointments
+1:36:06
+insert into appointments and then specify these columns course name,
+1:36:12
+instructor instructor name, comma
+1:36:17
+start un end date. I will insert these values.
+1:36:24
+These values which are values which are question mark
+1:36:30
+question mark four question marks as placeholders to
+1:36:36
+uh to to insert them or inject them later to inject these values later and
+1:36:42
+then I will close this prepare uh bracket here and then put a semicolon.
+1:36:49
+The next step is call statement. The next step is call statement variable and
+1:36:55
+then bind param. This bind param is really fun. Why? Because we we have to
+1:37:01
+put four s letters. If you have here four question marks, you will have to
+1:37:08
+put into here you will have to put into here four s letters. But if you have 10
+1:37:13
+question marks, you'll have to put into here 10 s letters. So it's quite fun to
+1:37:19
+to count them and then pass them to your course comma instructor comma start
+1:37:26
+comma end statement and then call the method
+1:37:32
+execute. This method will execute this SQL query and then header I will header
+1:37:40
+the user redirect the user to the location which is
+1:37:46
+uh it's a good practice to close this statement. So statement and then call
+1:37:51
+the method close. Why do we have to close it? Uh so to keep resources uh to
+1:37:57
+not to keep PHP busy with that statement. So we have to close it.
+1:38:02
+Always if you open some statements or files, you have to close them using a close method or close function. And then
+1:38:10
+and then location. I will specify a location and then put a dot sign. In PHP
+1:38:17
+when you want to concatenate strings or concatenate substrings, we use dot. We
+1:38:23
+don't use plus as in Python or JavaScript. We use a dot notation to concatenate. And then we have to go the
+1:38:30
+the server magical variable and then choose the the attribute PHP self
+1:38:39
+and then concatenate a third string a third substring and then put a question
+1:38:44
+mark success. If this operation happened and it's successfully happened, I will
+1:38:52
+send it send the user to this file with a parameter success equals 1 equals 1.
+1:39:00
+Okay, so success equals one and we don't forget to put a semicolon otherwise PHP
+1:39:05
+will cry out and then exist or exit. Exit will exit out of this file.
+1:39:12
+Else, let's put an else command in here. So else if we don't have these variables
+1:39:19
+or if we don't have one of these variables we will add a else logic here.
+1:39:25
+else we have to header we have to redirect the user to this location which
+1:39:31
+is location and then uh concatenate the string
+1:39:36
+server and then choose the parameter PHP self and then concatenate this string
+1:39:44
+question mark error I will pass error equals 1
+1:39:50
+and then exit you have to exit out of this script out of this PHP script script. Now we have finished our handle
+1:39:59
+add appointments. Let's move on to the next step which is handle edit. Handle
+1:40:05
+edit appointment. The same thing if if condition if server
+1:40:14
+if the server variable and then choose this request method property or
+1:40:20
+attribute. If this equals equals equals post then I will and and if the post the
+1:40:27
+magical variable post and then choose the parameter or attribute or property
+1:40:33
+action action and then put double question marks single quotation marks
+1:40:39
+equals equals edit. If the action is edit then I will
+1:40:45
+go and you can make it in single in single quotation marks
+1:40:53
+and also we can put in here three equal marks. If this logic happens or if these
+1:41:00
+conditions are met, we can go and id equals post we will call the post
+1:41:07
+variable and then select the uh property event underscore id equals and then go
+1:41:17
+double quotation marks null otherwise we'll make it as null and then course
+1:41:23
+the course name equals trim I will trim trim takes for me a string and trim it.
+1:41:30
+So trim post and then also I will select the course
+1:41:35
+underscore name attribute and then put double question marks and then specify
+1:41:40
+single empty single quotation marks. instructor I will get the instructor
+1:41:46
+name from the post from the sent post variable and then specify instructor
+1:41:53
+underscore name and then specify it as null otherwise as empty string also the
+1:42:00
+start date the starting date equals the magical variable post
+1:42:06
+and then choose the attribute start underscore date put double question
+1:42:11
+marks as empty string and then end equals post
+1:42:17
+and then choose end date double quotation double quotation marks and
+1:42:22
+then single quotation uh double question marks and then single quotation marks
+1:42:28
+and then put a semicolon. Now we have gotten these variables in a
+1:42:36
+correct way and we have stored them in these variables. We can check if we have
+1:42:41
+if we actually have these variables by going if id ID variable and add course
+1:42:49
+and and instructor and add start
+1:42:55
+and add end. We can go ahead and create a statement
+1:43:01
+equals connection and then prepare. I will
+1:43:06
+prepare a new statement which is update and this time I will update the table
+1:43:13
+appointments. Let's copy its name. Update the table appointments and then
+1:43:18
+paste it into here. Update the table appointments. Set the course underscore
+1:43:24
+name to equal question mark, instructor instructor
+1:43:30
+name to equal question mark, comm, start underscore date to equal question mark
+1:43:37
+and then end underscore date end date equals question mark where
+1:43:45
+ID equals question mark and then we have to put a semicolon after this parenthesis or after this
+1:43:52
+brackets and then we have to bind the parameters by going stmmt short for
+1:43:58
+statement and then bind_pammed params parameters and then pass into
+1:44:03
+here ss ss si then pass course comma
+1:44:08
+instructor comma start comma end comma
+1:44:14
+id. So, so we are binding these variable names to these question marks.
+1:44:22
+The third step is statement and then execute it. We have to execute it by
+1:44:27
+going execute function and then we have to go header uh we have to go statement
+1:44:34
+and then close this statement. The last step is header. We have to
+1:44:40
+redirect the user to the location which is
+1:44:46
+dot to concatenate and then server PHP self and then put concatenation mark
+1:44:55
+question mark success equals 2 and then semicolon and we have to exit out of
+1:45:01
+this PHP script. else. If we notice here, we have this
+1:45:08
+condition. If request method, okay, and and and then we have an inner
+1:45:14
+loop. If ID, course, instructor, start and date are all available. We have to
+1:45:20
+put an else here and then specify header location
+1:45:25
+and then dot to concatenate to the server variable and then choose PHP
+1:45:33
+self and then concatenate to the error
+1:45:38
+question mark error equals 2 and then put a semicolon and we have and then we
+1:45:44
+have to exit out of this script. exit.
+1:45:50
+The third step or the third major step here is we have to handle delete
+1:45:56
+appointment by going if server if the server and
+1:46:03
+then choose the property request method request method equals equals equals
+1:46:11
+post and by putting and double and marks and
+1:46:17
+post variable and then choose Choose the action property. If the action
+1:46:25
+equals equals equals delete then I will go ahead and
+1:46:34
+id fetch the id from the post variable by going post and then extract the id
+1:46:40
+the event underscore id. So I am extracting the id attribute outside of
+1:46:45
+the post variable. and then put double question marks null
+1:46:52
+otherwise it will be none. If id if we do have ID I will go and create a
+1:46:58
+statement by connecting to the to the database and then calling a method in
+1:47:04
+here prepare. This method is called prepare. I will prepare an SQL statement
+1:47:10
+to be uh run or to be executed on the database which is in this case delete
+1:47:17
+from the table appointments which I will copy its name
+1:47:24
+to be exactly it appointments where id column equals question mark and then
+1:47:31
+statement I will bind parameter. So bind param function really important function. This function bind or maps the
+1:47:39
+parameters to these question marks. bind and scope RAM and then I
+1:47:45
+comma id statement stmmt
+1:47:51
+execute. I will execute the statement and then SMTB SM stmmt the
+1:47:58
+statement and then we have to close this statement or close the this statement
+1:48:03
+header and then we have to redirect the user to this to the server
+1:48:10
+which is PHP self and then we have to go and redirect him
+1:48:16
+to the success uh by a success message equals
+1:48:23
+equals 3 and then exit out of PHP.
+1:48:34
+Now then the last thing is success success
+1:48:41
+and error messages. We want to handle success and error
+1:48:48
+messages. If is set the function is set determine if a variable is declared and
+1:48:54
+is different than null. So this function checks whether the variable is declared
+1:48:59
+or not. And also at the same time it checks whether it if this variable is
+1:49:05
+different than the object null. If is set and then pass into here the get
+1:49:11
+variable the get magical variable success.
+1:49:18
+Well, then we will call our variable success message which we have defined
+1:49:23
+way at the top of this file success message
+1:49:28
+and then we have to put equals match. We have to use the keyword match
+1:49:33
+and then we have to put an expression in here. Get expression success. I will get
+1:49:39
+the success message from the get. If the if the success message match one then I
+1:49:47
+will return this message which is the check mark icon
+1:49:53
+and then appointment appointment added successfully
+1:50:02
+comma if it's two if it is two then I will return a check mark
+1:50:11
+and then write in here. Appointment appointment updated successfully because
+1:50:17
+when we uh do a a an editing mode we
+1:50:23
+will return two. Here when we add when the action is add
+1:50:29
+we specified the success to be one. When we update or edit when the action is
+1:50:35
+edit we specify the success as two. And when the handle delete when we handle
+1:50:43
+delete actions we specify the success as uh three. I think we have missplit success in
+1:50:49
+here. Success success
+1:50:58
+like this and also like this. Yeah. So now I think successfully is now
+1:51:04
+successfully like that. Comma three when the three
+1:51:10
+when we have three as action then we will put a check mark or put a uh bin
+1:51:18
+mark and then appointment declared
+1:51:26
+or deleted. Appointment deleted deleted successfully.
+1:51:33
+Comma the default well when it's not one and not two and also not three the
+1:51:40
+default will will return nothing then we will put in here semicolon
+1:51:48
+you can make it single quotation marks and then if is set also we will use the
+1:51:55
+is set function is set the variable get the magical varable will get and then
+1:52:01
+choose the error uh parameter or error attribute or error. We will set the
+1:52:06
+error message variable that we have declared at the top of the file error
+1:52:11
+message to be equal or to equal
+1:52:17
+exclamation mark icon and then we have to put error a
+1:52:25
+there's an error a
+1:52:30
+let's make it single quotation marks
+1:52:38
+uh error occurred and then please check please check your input okay you have to
+1:52:46
+check your input and then put a semicolon
+1:52:52
+then I will put fetch here calendar we'll use a calendar icon here fetch
+1:53:01
+all appointments all appointments appointments
+1:53:08
+and spread over date range. So I have to fetch all
+1:53:14
+appointments and spread over date range by going result equals
+1:53:20
+connection and then we have to we have to execute a query in here which is
+1:53:26
+select uh select asterisk from appointments. I
+1:53:32
+will copy the name of the table. Okay. So, select asterisk from appointments
+1:53:38
+and then put a semicolon. So, we have selected every single row or every
+1:53:43
+single column all the columns from appointments.
+1:53:48
+if result variable and and
+1:53:53
+result fetch underscore uh fetch and then call num
+1:53:59
+underscore rows or by going result and then call the
+1:54:05
+method num underscore rows is greater than zero. So when we fetch
+1:54:13
+these columns if we have result and at and also we have the result the number
+1:54:20
+of rows. So the number of rows of the result is greater than zero then and
+1:54:26
+only then while row equals result and then fetch all
+1:54:33
+associative fetch underscore associative array. Then we have to go
+1:54:40
+start equals new. We have to set we have to instantiate a new object from the
+1:54:47
+datetime class by going new datetime class and then pass into here
+1:54:53
+t should be capital uh with the Pascal case because this is this is a class we
+1:54:59
+have to use datetime class and then pass into here row start and date. So we have
+1:55:06
+to pass the start date that we fetch from the SQL database. We have to pass it to the datetime class and instantiate
+1:55:15
+a new object from this class. New new datetime. The same thing with end.
+1:55:22
+So new datetime class and then pass into here row and
+1:55:28
+then pass end date. Then while start is less than or equal
+1:55:36
+end, we will go ahead and call our variable events from DB which
+1:55:43
+is defined into here. Events from DB and then we have to fill it fill this array
+1:55:50
+by going empty square brackets empty square brackets equals square brackets
+1:55:56
+and then put ID as ID in string format. ID matches or corresponds to this value
+1:56:05
+row ID, comma, we have title title and
+1:56:11
+then we have to go and put in here row as like that
+1:56:18
+uh square brackets and then row
+1:56:24
+and these are curly brackets curly brackets and then row
+1:56:31
+and then put put square brackets as like that. Course underscore name
+1:56:38
+minus outside of the square brackets minus and then row
+1:56:47
+and then choose the instructor name. instructor dash name or underscore name instru
+1:56:54
+instructor name comma date
+1:57:00
+it will be mapped to the start variable start and then format I will format the
+1:57:08
+start as year dash month dash days
+1:57:13
+comma and then start the variable uh the the property start will be mapped to to
+1:57:19
+the value row and then choose the column start underscore date comma end and
+1:57:25
+we'll choose the ver the column end and the column end will be mapped to row and then we'll choose the column end
+1:57:31
+underscore date after this list I will put semicolon and
+1:57:37
+then start and and and I will call the function or method modify we will modify
+1:57:44
+here and then pass a string that contains plus one white space day
+1:57:54
+or we can use single quotation marks as + one and then day and also here we
+1:58:02
+could use single quotation marks year capital y- m dash m refers to months
+1:58:09
+dash d refers to days this is the format of the of the start
+1:58:14
+date and then we will have to connection and close the connection by going
+1:58:20
+connection close the connection. And with that being said, congratulations.
+1:58:25
+We have finished writing our PHP logic in this video. So we have finished
+1:58:31
+constructing our HTML structure, building the structure and architecture of the page. And then we have decorated
+1:58:38
+and styled our CSS file using uh CSS sty styling codes flexbox and grid. And then
+1:58:46
+we have created the PHP logic which inserts, adds or or or updates, edits or
+1:58:53
+deletes or removes appointments or tasks or events from the database or table
+1:59:00
+appointments. In the next video or in the next section, we will dive into
+1:59:06
+writing JavaScript code which will make our page uh interactive and also make
+1:59:14
+our uh calendar app interactive with the user to show the pop-up model and also
+JavaScript Logic: Dynamic Calendar Rendering & Modal Control
+1:59:19
+to be uh in a dynamic order. So see you there and thanks for
+1:59:25
+watching. In this section we will dive into JavaScript section. So let's go into the
+1:59:33
+calendar.js file and then start coding JS. The first thing we have to do is
+1:59:39
+create a constant and name it as calendar eel. E is short for element. So
+1:59:46
+calendar element equals document. We will select the document dot getelement
+1:59:52
+by id. So we want to get an element by by an id and then pass in here ID value
+1:59:58
+as calendar.
+2:00:03
+Then constant another constant called month eel the month element equals or month year
+2:00:12
+element to be comprehensive name document dot getelement by id
+2:00:19
+get element by ID and then pass the ID as month year.
+2:00:27
+We need also a third constant name it as mod element. We need to get the mod
+2:00:32
+element equals document dot get element get element by id and then pass in here
+2:00:40
+event model capital m notice the capital M.
+2:00:45
+Now we will create a let variable and call and call it current date capital D
+2:00:53
+equals new date. So we will initialize a new date object.
+2:00:58
+The second step here is we will create a function and name it as render calendar. This
+2:01:06
+function will take from me date equals new date. So we will initial
+2:01:14
+we will initialize this function with the parameter date equals new instance
+2:01:19
+of the date class or of the date object and then the calendar element calendar.
+2:01:25
+If you choose calendar eel dot inner HTML we will we will update the inner
+2:01:30
+HTML property or attribute of this element calendar element to equal an
+2:01:35
+empty string. Then we will initialize a constant called year equals date.get.
+2:01:44
+Notice get full year. And we know that JavaScript uses camel case. The first
+2:01:50
+letter is small. The first letter of each subsequent word is capital. So f is
+2:01:55
+capital, year is capital, y is capital. Then constant name it as month equals
+2:02:01
+date dot get month. We will get the month. So get full year. uh get the full
+2:02:07
+year format get month. It gets the month and then a constant called today equals
+2:02:13
+date or equals new date object. Then we will create a constant called
+2:02:21
+total days. So the total number of days equals new date and then
+2:02:27
+pass in here the constant here that we have created above comma month. So month
+2:02:35
++ 1 comma 0 then dot get date. So we we
+2:02:41
+want to get the date using the get date method and then we will create a
+2:02:46
+constant called first day of month. So the first day of month we need to select
+2:02:52
+or detect what is the first day of the month. first day of month equals new
+2:02:58
+date class and then pass in here year, month comm, one dot get day method.
+2:03:07
+Now we have we have created our constants and variables we can go ahead and use them.
+2:03:14
+So now we want we want to display we want to display this play
+2:03:21
+month and year by going month year element the month year element dot text
+2:03:28
+content. So text content updates the text content of an of an element. It's
+2:03:34
+similar to the inner HTML but it just deals with text equals
+2:03:41
+date dot to local date string. This is a function that
+2:03:48
+takes for me a local string array of local of local strings or array of local
+2:03:54
+objects and then convert a date to local date string. So we have to pass in here
+2:04:00
+the local as en- us comma and then pass
+2:04:05
+in here an object that contains a key or or property as month with the value
+2:04:11
+long. So as the value long comma year as the
+2:04:17
+value numeric and we have to put a semicolon here for JavaScript and then constant we will
+2:04:25
+create constant called week days the days of the week it it's it's just an
+2:04:31
+array of the days names. So Sunday uh short is sun Monday short is man to
+2:04:41
+which is Tuesday Wednesday Thursday Friday,
+2:04:48
+Saturday and then we have to go and loop through it using a for each. So weekdays
+2:04:54
+do for each loop for each and then pass in here day. So it takes
+2:05:01
+for me a parameter day and then we will do an arrow function. This is a shorthand function a short version for
+2:05:08
+functions. It's called arrow function. And then specify in here constant as day
+2:05:13
+el day element equals document dotcreate element. For each day we will create an
+2:05:20
+element which is a div. So we will create a div element for each single or
+2:05:26
+for every single day. For every single day we will create element as div. And
+2:05:32
+then we will take this day element and update its class name property which is
+2:05:38
+the class to equal the value day- name as you can see in
+2:05:45
+here. Then day element dot text content we will update the text content property
+2:05:51
+to equal day just the day parameter and then put a semicolon. then the calendar
+2:05:57
+element dot append child. We will append a new child which is the day element. So
+2:06:02
+we're taking the day element and appending it to the calendar element
+2:06:08
+just as you can see in here and then put a semicolon in here.
+2:06:14
+The next step is we need to create a for loop for and then as you can uh as you
+2:06:21
+know we have to initialize a variable let equals zero. initialize it from zero to start from zero. I
+2:06:28
+uh I will work as long as I is less than first day of month. Then semicolon I ++
+2:06:37
+and each in each loop we will increase the I by one val uh by one unit one
+2:06:43
+unit. Calendar element. So calendar element dot append child we will append
+2:06:51
+the child document dot createelement. We will create an element using the do
+2:06:57
+function. DOM is short for document object model and then pass in here the
+2:07:03
+element div and then put a semicolon here.
+2:07:09
+After this for loop we will loop through days. So let's go to loop. Let's loop
+2:07:16
+loop through days by using a for loop. So for let day equals 1
+2:07:24
+as long as day is less than or equal total days
+2:07:30
+then day plus. For each day we will create a constant called date string
+2:07:38
+equals a tilda which is uh this new way of writing strings in JavaScript. And
+2:07:44
+then put dollar sign year minus dollar sign and then we will pass in here the
+2:07:50
+string class string capital S and then pass in here month + one
+2:07:58
+and then dot we have to call dotpad pad string pad start
+2:08:04
+and then pass in here two comma zero. So we will pad it with two zeros
+2:08:11
+minus outside of this we'll put a minus sign and then dollar sign
+2:08:18
+string and then pass in here day dotpad start. You have to pad the start and
+2:08:24
+pass in here max length as two and then the the zero as the string
+2:08:31
+and then put a semicolon. Then we'll create a constant which is cell. So the
+2:08:36
+cell the cells by going document dotcreateelement we will create an an
+2:08:42
+element create element and then pass in here the name of the element which is div
+2:08:48
+then cell dotclass name we will set the class name as day
+2:08:54
+and if you recall we have styled this day class in CSS. If we will specify if
+2:09:00
+condition if day equals today dot Get
+2:09:06
+date and and if month equals equals equals today dot get month method and
+2:09:17
+year equals equals today dot get full
+2:09:23
+year. If so, we will run some logic in here which is cell dotclass list
+2:09:31
+dotcl class list dot add we will add the today
+2:09:37
+element. So today pass today as string to the class list
+2:09:43
+and then constant we will we will create a constant which is date eel date element equals document document dot
+2:09:52
+createelement create capital E capital E element and then pass in here the string
+2:09:58
+div by going diiv and then we have to go outside of this uh uh semicolon date
+2:10:06
+element dot class name capital n as you can notice capital n equals date dash number. So
+2:10:15
+the date number uh of the day then date element date eel dot text content equals
+2:10:23
+day. Then we will append this child to the cell element by going append child. You
+2:10:29
+can notice that we have a capital C. So append child and then pass in here a node which is date eel date element.
+2:10:36
+After this we will create a constant called events today. This constant will
+2:10:42
+equal events dot filter. We have to filter over the events by going events
+2:10:48
+dot filter events and then put a dot filter function pass in here e as a
+2:10:56
+parameter and then an arrow function a dot date equals equals equals date string where the date equals the date
+2:11:04
+string. Then we will initialize a constant as event box equals document document
+2:11:12
+dotcreateelement function which creates an element in the do which is document object model pass
+2:11:19
+in here div. Then event box we will add a class name as the events class by
+2:11:27
+going events semicolon. Then we have to render. We will go to have to render
+2:11:33
+render events by going events today events today
+2:11:38
+and then dot for each we will create a for each here function event
+2:11:45
+and then do an arrow function for each event we will create a constant evv
+2:11:50
+which is event short for event equals document dotcreateelement. So we are creating some elements here
+2:11:58
+using the create element function and then pass in here divvent
+2:12:03
+dotclass name equals the string event. Then we will initialize a constant
+2:12:10
+course eel course element equals document dotcreateelement
+2:12:15
+and then pass in here div course element dotclass name. So we are creating some
+2:12:21
+variables for each thing here for the course for the event and then pass in here equals course as the class name
+2:12:28
+course eel course element text content we have to update the text content
+2:12:33
+property to equal event.title title dotsplit. We have to split it by the
+2:12:40
+whites space dash whitespace and then at index zero and then constant we have to
+2:12:47
+name it as instructor eel instructor element equals document dotcreate
+2:12:53
+element and then pass in here div instructor element and then tap on
+2:12:58
+instructor element dotclass name. We have to tap on the class name property to equal the string or value instructor
+2:13:07
+instructor element. We have to go to instructor element dot text content
+2:13:14
+equals text content equals this icon of the teacher.
+2:13:22
+You can not you can put this icon of teacher or trainer teacher.
+2:13:31
+And then we have to go plus event.title dotsplit and then pass in here
+2:13:39
+whitespace dash whites space at index one. So we have to put here whitespace
+2:13:47
+then constant we will create a constant for the time element. We have now to create a time element by going document
+2:13:54
+dotcreateelement for the time which is also a div time
+2:13:59
+element time time eel time element dotclass name equal time the string time
+2:14:07
+then time element text content we have to tap over time eel element dot text
+2:14:16
+content capital c equals this clock icon For example, if you want to use some
+2:14:21
+icons, so clock icon,
+2:14:26
+then concatenate with the event dot start
+2:14:33
+time plus string of this dash then plus event.end underscore time.
+2:14:44
+Then we have to go EV the event.append child. We have to append this child
+2:14:49
+which is course element that we have created above. And also we have to append another child which is the
+2:14:57
+instructor element child by going instructor eel which we have created in here create element div and then we have
+2:15:04
+to append event.append child append child function pass in here time
+2:15:11
+element. The same thing goes event box dot append child and then pass in here
+2:15:17
+EV. We have to append the event to the to the event box.
+2:15:24
+Now we will continue uh with the overlay buttons by going overlay buttons.
+2:15:32
+Create a constant which is overlay equals document dotcreate capital E
+2:15:38
+element. So create element. have to create an element and pass in here the name of an element which is div.
+2:15:45
+Then overlay dot class name equals day-overlay which we have styled in the
+2:15:53
+CSS over overlay overlay overlay
+2:15:59
+then constant add btn equals document dotcreate element and then pass in here
+2:16:06
+a div add pass in here a button. So we have to
+2:16:12
+create a button element by going document dotcreateelement and then pass
+2:16:17
+button as a button element then add btn this element we have to add a class name
+2:16:25
+we have to inject a class name which is overlay overlay-bn
+2:16:30
+so you can notice the trend of creating some elements and then injecting some class names for each element
+2:16:36
+and then add btn text content we have to change the text content of this element
+2:16:42
+of this button element by going uh putting a string plus icon and then add
+2:16:47
+to add a new event or to add new task add btn dot onclick we will use the on
+2:16:54
+click event equal this e which is short for event and then put an arrow function
+2:17:01
+e dot stop program propagation this
+2:17:06
+function will stop the propagation stop propagation and Then open model we will
+2:17:12
+call this function which we will create uh after this function called open model
+2:17:18
+for add and then pass in here date strr date string
+2:17:24
+and then we will put semicolon here. We will go overlay dot append child and
+2:17:32
+then pass add btn. So we are appending we are appending the child btn to this
+2:17:38
+overlay overlay. add be a pen child add button. Then we will check uh an if
+2:17:45
+condition here. If if if
+2:17:53
+events today dolength is greater than or bigger than zero then
+2:17:59
+we will create a constant which is edit button. We will get the edit button to equal document dotcreateelement.
+2:18:07
+We are we are we are creating a new element which is a div element
+2:18:13
+which is a button element in this case button element and then edit btn edit
+2:18:18
+btn dot class name we will update the class name to be overlay overlay dashbtn
+2:18:28
+and then we'll go edit btnext content equal
+2:18:35
+edit edit btn dot onclick.
+2:18:41
+When on clicking on this button, we want to uh run a function which is an arrow
+2:18:47
+simple arrow function that stops propagation. So stop propagation and
+2:18:52
+then open model for edit. We have to call this function
+2:18:58
+and then pass in here events today. events today.
+2:19:06
+Then we will call overlay dot append child. We have to append a new child which is edit btn the element that we
+2:19:14
+have curtain here by going document create element button and then we have
+2:19:19
+to outside of this if condition we will run cell.append
+2:19:24
+child pass in here overlay and then cell do.append Append child. We have to
+2:19:30
+append a new child which is event box.
+2:19:35
+Also the calendar eel element dot append child. We have to append the child which
+2:19:41
+is cell. So the JavaScript is generating the content for the HTML.
+2:19:47
+Now we have finished writing this whole function which is called this render
+2:19:52
+calendar. This function will render the calendar on the page.
+2:19:58
+After this function, we will uh create a a new function or
+2:20:05
+another function for adding event model. So we will go add event model function
+2:20:12
+and then we will call it open model for add and then pass in here date strr date
+2:20:19
+string. This function will go document getelement by id. We'll get a new
+2:20:26
+element by id which is form action. This element this form dot value we will set
+2:20:32
+the value as equal add. So we are simply here we are selecting or we are choosing
+2:20:40
+an element using an id by going get element by id this form action and
+2:20:45
+setting its value to equal the string add. The same thing goes for here. Document getelement by id get element
+2:20:53
+element by id and then pass event id capital e dot value equal empty string
+2:21:00
+document dot getelement by id and then choosing an an an element which is
+2:21:06
+delete event id and setting its value as an empty string.
+2:21:13
+The same for the course name. We have to go document getelement by id and then select course name element and we have
+2:21:20
+to set its value as empty string. So we are initializing the values of the of
+2:21:27
+the value as empty string. The same goes for the instructor name element. You
+2:21:32
+have to go instructor and instructor capital n name. So the instructor name
+2:21:39
+dot value attribute equals an empty string. The same thing goes also for the start
+2:21:45
+date. We have to go get element by id and then choose start date dot value
+2:21:51
+equals empty string. Now this time equals date strr date string. So we have
+2:21:57
+to set the value as date strr capital s that we are passing into here. We are
+2:22:02
+passing it to the function open model for add.
+2:22:07
+Now we have more uh three more uh elements which is end date. We have to go document getelement by id and date
+2:22:16
+and we have to
+2:22:21
+set its value to the date strr also date string
+2:22:28
+document dot getelement by ID and then choose start time capital T start time
+2:22:33
+and then set its value attribute equal 09
+2:22:39
+and then colon zero document dot getelement by id choose end
+2:22:45
+time we have to choose end time element and then go do value equals 10 and then
+2:22:51
+put double zero here after a colon sign. Now after we have initialized the values
+2:22:59
+as you can see some with empty values some with some default values that you
+2:23:05
+are passing to the function and some with some starting point times. We can now go ahead and update them by going
+2:23:12
+constant selector. We will we'll create a constant selector equals document dot
+2:23:19
+getelement by id. We are getting an element by id. Get element by id and then pass in here events
+2:23:27
+selector or event selector. So event one event and then capital s selector. Then
+2:23:34
+we will create a constant wrapper. wrapper to uh has to equal document dot
+2:23:41
+getelement by id and then choose the event selector
+2:23:47
+wrapper and uh uh we have capital W capital S and a small E. So event
+2:23:56
+selector wrapper and then put semicolon. If selector if if we do have a selector
+2:24:02
+if we do have a selector and if we have also a wrapper available we can go ahead
+2:24:09
+and do selector dot in HTML we will update the inner HTML to be an as an as
+2:24:16
+an an empty string then wrapper dostyle dot display equals the none value. You
+2:24:23
+have to make the display of the wrapper as none. Outside of this if condition, we will go
+2:24:30
+and put in here modelement model eel dotstyle dot display set the
+2:24:38
+display attribute to equal flex. So we are displaying the model by going modto
+2:24:44
+element dotstyle dot set the display property to equal flex.
+2:24:49
+Then we will create another a third function which is edit which is edit event edit event
+2:24:58
+model by going function the keyword function and then name the function open
+2:25:04
+model for edit. This function takes from me one parameter which is events on
+2:25:11
+date. Events on date. And then this function
+2:25:16
+will set the document dot getelement by id get element by id and then pass in
+2:25:23
+here a form action set the value as equal edit. So we are setting the value
+2:25:30
+of the form action. The action we are trying to do is editing. editing some event some existing event and then we
+2:25:37
+have to go modle element dotstyle dot display we have to display it using a
+2:25:43
+flex display mode then we will create a constant called selector
+2:25:49
+equal document dot getelement by id and then pass in here event selector
+2:25:56
+after that we will go constant wrapper equal document getelement by ID we will
+2:26:02
+choose an an element called event selector wrapper
+2:26:08
+and then we have to go selector dot in HTML update the in HTML we will update
+2:26:14
+the in HTML to equal option so we are filling that select element or that
+2:26:20
+select element with some options the option element in the drop-own menu we are populating some option elements each
+2:26:29
+option represents one one whole task option disabled disabled and then selected. We
+2:26:38
+have to pass in here se the two attributes disabled and selected
+2:26:43
+and then right in here choose event dot dot and then slash option.
+2:26:54
+Now we will loop through the events on date by going events
+2:26:59
+on events on date dot for each for each function. This function will
+2:27:08
+take from me one parameter as e and then put an arrow function. We have to create
+2:27:13
+a constant option equals document. We have to create an element create element
+2:27:21
+as option. So in dynamic web apps the JavaScript populates the HTML content.
+2:27:26
+So in the JavaScript section we are creating new elements and populating some new HTML elements through
+2:27:33
+JavaScript option dot value set the value to equal JSON. The JSON class dot stringify
+2:27:42
+method we have to stringify it by passing the event to the stringify function. And then option dot text
+2:27:49
+content text content equals tilda and then set here e.title title
+2:27:57
+space dollar sign or put a parenthesis and then dollar sign select e dot start
+2:28:05
+and then put some arrow here arrow icon
+2:28:14
+and then initialize a dollar sign and then eend we have to access the end
+2:28:20
+attribute selector append child we have to append this child to the option. So we are
+2:28:27
+appending the child option to the selector and each time for each event we
+2:28:33
+are appending the option element that we have created into here. We have created
+2:28:38
+the option element and append it to the selector.
+2:28:45
+Next I will create an if condition here to check events on date. If events on
+2:28:51
+date.length if its length is greater than one then go wrapper.style dot
+2:28:59
+display dot display equals block otherwise else. So other than that we
+2:29:06
+will go wrapper.style dot display we will set the display to
+2:29:12
+equal none. We have we have to disappear it by going wrapper. Do display equals
+2:29:21
+none. Then we will handle event selection by going handle event selection. This is a
+2:29:28
+new function that we will create after a minute. So JSON dot stringify
+2:29:35
+pass in here events on date at index zero. It's called handle event
+2:29:42
+selection. And we have to close this as semicolon.
+2:29:49
+This function will handle the event selection by going function. We will
+2:29:54
+create a new function called handle event selection and then pass in here event JSON as capital S capital O and N.
+2:30:04
+JSON is short for JavaScript object notation.
+2:30:09
+So this function will do populate will populate form from selected event from
+2:30:16
+selected event constant event. This event constant will
+2:30:23
+equal JSON.parse. We have to parse the JSON content and then pass in here event
+2:30:29
+JSON the parameter event JSON. Then document we will select an element using
+2:30:35
+using an id which is event id dot value
+2:30:40
+equals event do id. The same thing goes for the get element by id which is
+2:30:46
+delete event delete event id dot value equals event do id.
+2:30:56
+The last thing we will create a constant which will takes from me course,
+2:31:01
+instructor in this kind of syntax equals event dot title dotsplit. We have to
+2:31:10
+split pass a string whites dash white space
+2:31:16
+dot map. You have to map event and then arrow function e.trim. you have to trim
+2:31:22
+it in case there are some uh beginning white spaces or ending white spaces.
+2:31:28
+Then we will go document getelement by id and choose the course name element
+2:31:34
+dot value equals course or we will set
+2:31:39
+it as empty string. The same thing goes for the instructor name and for the
+2:31:44
+whole. So I will copy paste it.
+2:31:54
+So the only thing I have to change is the the names of the instructor name and
+2:32:00
+the names of the elements. So course name and then we have to set
+2:32:06
+this as instructor name. Instructor name and then start date,
+2:32:13
+start date, end date,
+2:32:19
+start time and then end time.
+2:32:25
+Then we have to change here from course of course we need to make sure that we have uh that we set the value attribute
+2:32:33
+for each one as its corresponding value. In this case, we will set it as instructor. Then we will set it as event
+2:32:41
+dot start. Then event dot end.
+2:32:46
+The same thing goes for the time. Event event dot start time. Now you may have
+2:32:53
+the question from where do we have this event time or start time? We we didn't
+2:32:59
+include it in the app. But we will create a new section in this video. Then
+2:33:05
+we will update the HTML, CSS and and PHP to include this new feature which is the
+2:33:12
+starting time and ending time. So in the next section we will dive into how to
+2:33:17
+append this new feature of time, start time and end time for each for each of these files for the HTML and CSS and PHP
+2:33:26
+files. How to include this new feature of starting time and ending time. The
+2:33:32
+next we will create a function called close model. This this function will close a model which will take our modal
+2:33:40
+element model element dot dot style dot display equals none.
+2:33:50
+So make the display property as none for the model element. This function will
+2:33:55
+close the model. Then I will create an a comment here
+2:34:02
+month navigation. This function will navigate through months navigation by
+2:34:09
+going month function and then name it as change month pass in here offset. We
+2:34:14
+have to pass an offset pro parameter and then current date. We have to go to
+2:34:20
+current date dot set month and then pass in here current date dot get month
+2:34:27
+method plus offset. You have to add an offset parameter. So we are adding the
+2:34:34
+offset parameter the value of this offset parameter to the get month that you have gotten from the current date
+2:34:43
+and then render calendar we have to call that long function that we have that we have created above which is called
+2:34:49
+render fun render calendar. It takes from me just one parameter which is current date current date. So we are
+2:34:56
+passing current date and then to the render calendar function in order to render the calendar.
+2:35:03
+The very last function is a live digital clock. So that clock will will not be
+2:35:12
+will not work until we define this function. So live digital clock by going
+2:35:18
+function and then name it as update clock. Update clock pass in here. It
+2:35:25
+takes from me no parameters. Then constant now we will name the constant as now equals new date. We have to start
+2:35:33
+a new date by going new date object or date class.
+2:35:39
+The same thing we have to create a clock variable equals document dot getelement
+2:35:44
+by ID. We need to get the element of the clock using its id. So document
+2:35:49
+getelement by id and then get the element clock small clock.ext
+2:35:56
+content we have to set the content of this element by by coming equals a an
+2:36:02
+array. This array will text from me now the now constant which is a new instance
+2:36:08
+of the date object now dot and then access the method get hours by going get
+2:36:14
+hours method dot to string. We have to convert it into a string format. Pad
+2:36:21
+start we have to pad it put some padding which is the max length as two and then
+2:36:27
+comma we have to pass in here zero to add some padding for the hours. Now dot
+2:36:32
+get minutes. We have to get minutes and then we have to convert it into a string by going to two string.pad
+2:36:40
+start and then pass in here the max length as two comma and then the
+2:36:45
+character zero. The same thing goes for the seconds. So get seconds method. This method will get
+2:36:53
+the seconds dot to string. You have to convert it into a string. So it specifies a radics for converting
+2:36:59
+numeric values to strings. to convert some numeric value to strings and then
+2:37:05
+pad start passing here two comma zero. This array we have to join it by going
+2:37:12
+dot join. So the join method is a popular method and then join based on this character colon
+2:37:21
+and close it with a semicolon. Now the initialization process
+2:37:26
+initialization by going render the calendar and pass in
+2:37:31
+here current date and then update clock. We have to call the function or invoke the function
+2:37:37
+update clock. So we are invoking invoke the function
+2:37:43
+update clock and also we have to call the function set interval and the set
+2:37:48
+interval will run the function every every uh predefined amount of time. So
+2:37:55
+every second which is 1,00 uh milliseconds every second we will run
+2:38:02
+this function which is update clock. So we will update the clock every second.
+2:38:08
+The clock will be updated. So with that being said, we have finished writing our
+2:38:14
+whole JS codes. I believe now our app will work. In the next section, as I
+2:38:20
+tell as I told you, we will add a new feature which is adding the the start
+Time Feature: Adding Time Slots & Fixing Issues
+2:38:25
+time and end time of each event. Then we will check and make sure that our app will work. So see you in this next
+2:38:32
+section. In the last section, I noticed that I
+2:38:38
+have some errors in the JavaScript and PHP files. If you go to the JavaScript
+2:38:44
+file, I mistyped the comma and typed in
+2:38:49
+semicolons instead of commas. So we have to replace these comma these semicolons
+2:38:55
+as commas to prevent the errors and to get the
+2:39:01
+JavaScript clean and ready to go. Once we solve this issue also in the PHP file
+2:39:10
+in here I have mistyped the
+2:39:16
+this notation as equals and then this notation I I have to change this equal
+2:39:24
+sign as dash. So we have to change or to solve this problem rather than using an
+2:39:31
+equal sign we have to use a dash sign or dash mark because we are accessing a
+2:39:36
+method we are accessing a method called format and formatting the start as year-
+2:39:43
+month-day. Okay. So now we have solved all of the problems and also in this
+2:39:49
+section I will extend and incorporate a new feature in our app which is the
+2:39:54
+start time and end and end time for each event. So not just we you not just we
+2:40:01
+are using dates but also we are incorporating the time the start time and end time.
+2:40:07
+So to to to achieve this goal, we have to go to the model here inside the model
+2:40:15
+div and specifically after right after the end date right below the end date we
+2:40:21
+have to add a label tag with a four attribute as start time with capital T
+2:40:28
+and then write in here start time and then close this label tag. Then I will
+2:40:35
+add an input of type time. So we have to add an input of type time or the type as
+2:40:42
+time and then give it a name as start underscore time. Then the ID as start
+2:40:50
+time and you have to make this input required.
+2:40:55
+Also we will add another label tag label tag with a four attribute end time and
+2:41:02
+then write in here end time.
+2:41:08
+Then add a new input with a type of time with a type time
+2:41:15
+and add a name for it as end underscore time and the id as end time and make
+2:41:22
+this input required. So now we have achieved the codes for
+2:41:27
+HTML successfully. We have to go to the CSS and also scroll up a little bit
+2:41:35
+right in right here. We have to update or edit the event to be as the
+2:41:42
+following. So the event now has a background of variable primary has a
+2:41:47
+color white padding three pixels from the uh top and bottom and six pixels
+2:41:52
+from right and left. We have to update this to be 6 pixels from top and bottom
+2:41:58
+and 8 pixels from right and left. Then the border radius we will make it 6
+2:42:04
+pixels. Margin top as 6 pixels.
+2:42:09
+And then font size 13 pixels rather than 14. Quesa as pointer and then line
+2:42:17
+height I will add the line dash height as 1.4.
+2:42:22
+Then display flex we will make the display flex for the event and we will
+2:42:28
+give it flex direction as column. So it will be in column fashion. Align dash
+2:42:34
+items items as flex- start. So that it starts
+2:42:40
+from the beginning and then box and the box dash shadow. We will add a shadow
+2:42:46
+for this event element zero pixels one pixel and then four pixel the spread
+2:42:52
+rgba as 0 0 0 comma 0.1
+2:42:59
+then transition transform by the duration of 15 seconds and the effect is
+2:43:05
+e is the next we will keep the hover effect as it is just we
+2:43:11
+will decrease the amount by 1% by giving 1.02 and then we will add a new element
+2:43:20
+in here which is event and then dot course. So we will style the course
+2:43:25
+element by going font weight. We will make the font weight as bold to make the
+2:43:31
+text bolder and opacity and we have to go font size 13 pixels.
+2:43:37
+Make the font size 13 pixels. Also dotvent and then dot instructor. We will
+2:43:44
+style the instructor as font size 12 pixels and then opacity as 0.85.
+2:43:54
+So it has an opacity rate or opacity degree opacity degree of 0.85.
+2:44:00
+Dot event and then select time element font size 12 pixels.
+2:44:08
+margin dashtop as three pixels and then color as F3 F3
+2:44:15
+F3 F3 F3 F3 Yep. dotvent- meta we have to
+2:44:22
+go font size 12 pixels and then color as E F line height 1.2.
+2:44:32
+Now we have finished CSS. We can move towards PHP. Now in the PHP file we have
+2:44:40
+to add the variables of time here. So we have
+2:44:46
+to go start time. So right below this end end date variable we have to go and
+2:44:53
+add a variable start time equals post and then choose the item start time.
+2:45:01
+Otherwise, it will be an empty string. And then end time equals the variable
+2:45:07
+the magical variable post underscore post. And then choose the element and
+2:45:13
+underscore time and then put double question marks and then single quotation marks as empty
+2:45:20
+string. The next edit is that we have to
+2:45:26
+update this statement here. So insert into appointments we'll go statement and
+2:45:33
+then equals connection prepare method insert into appointments
+2:45:38
+we can keep that the same course name instructor name
+2:45:45
+comma start date end date the same but now we have to add after end date we
+2:45:52
+have to add start underscore time comma end underscore time because Now we are
+2:45:59
+uh dealing with times and then we have to increase the number of question marks
+2:46:04
+by two. When we bind the parameters bind
+2:46:11
+parameters we have to increase the number of s letters by two s's. So now we have 1 2 3 4 5 6. We have six s
+2:46:20
+letters. And then we have to bind the course instructor start and then end.
+2:46:25
+After end we have to add start time variable and then comma end time
+2:46:31
+variable.
+2:46:38
+Then also we need to go down a little bit right below the end variable here
+2:46:44
+end date we have to add a new variable which is start equals post.
+2:46:54
+We will use the post variable and then select the attribute start underscore
+2:46:59
+time start time otherwise it will be an empty string.
+2:47:06
+The name of the variable is start time then end time equals post
+2:47:17
+and then select the attribute end underscore time otherwise it will be an empty string. So
+2:47:24
+now we have created two new variables start time equals post and then choose
+2:47:29
+start underscore time attribute otherwise it will be empty string. The
+2:47:34
+same goes for the end time we have selected from the post end underscore time and then otherwise it will be empty
+2:47:41
+string. We have to update or edit the update statement by going update fid.
+2:47:48
+Now we have to go and and start and and end date and then update the statement
+2:47:54
+equals connection prepare. We have to prepare a new statement a new SQL statement by by update appointments set
+2:48:03
+course name equals a question mark instructor name equals question mark start date equals question mark end date
+2:48:10
+equals question mark. Then after end date we have to add comma start
+2:48:16
+underscore time equals question mark comma end underscore time
+2:48:22
+equals question mark as as you see where id equals question mark.
+2:48:28
+Then when we bind the parameters we have to pass two more s's. So now we have S S S S S S
+2:48:35
+S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S I 1 2 3 four five six we have six S's and
+2:48:42
+one I and then we have to pass in here I uh course, instructor, comma, start,
+2:48:48
+comma, end comm, id. No, now we want to remove ID and add
+2:48:56
+rather than ID, start time, comma, end time, comma, id. So the last one must be
+2:49:03
+ID. Okay. Then we can execute and close that
+2:49:08
+statement safely. In the handle delete, we don't need to change anything. But
+2:49:16
+the last block of code here that we have to change is this while loop. So now we
+2:49:23
+have to add comma. After end we have to add comma then add string start
+2:49:28
+underscore time equals row we have to access the row and then access the
+2:49:34
+column start underscore time comma also we have to add end underscore time and
+2:49:40
+then add and then add this value row choose the end underscore time value
+2:49:52
+like that we have finished editing all of our file. Just one little small
+2:49:57
+adjustment in the SQL when we go to the calendar uh when when when we go to the
+2:50:04
+appointments inside our database calendar that we have created in the last section we have a calendar database
+2:50:11
+and then we have appointments. We need to go to this table. As you can see we have ID, course name, instructor name,
+2:50:18
+start date, end date and then and then created at we have to add two new
+2:50:25
+columns which is start time and end time. So add two columns after end date
+2:50:32
+which is start time of t of type time. So by going time
+2:50:39
+choose time and then end time choose the type time
+2:50:49
+and then we can save it like that. So now we have alter table appointments add
+2:50:54
+start time of type time not null also after end date add also end time of type
+2:51:03
+time not null alter start time. Now we have these two new columns in the table.
+2:51:10
+As you can see, start time, end time of type time. In the next section, we will
+Final Showcase: App Demo + Full Walkthrough
+2:51:17
+uh make sure that our app works successfully and we will preview it
+2:51:22
+together. So, thanks for watching. See you in the next section. In this
+2:51:27
+section, we will do the final touches of this app. As you notice, we don't have
+2:51:33
+the calendar showed and we cannot choose the days and the days are not are not
+2:51:39
+appeared in the calendar app. So to show the days to display the days we have to
+2:51:45
+go to the index.php file and the first thing we have to include the
+2:51:52
+calendar.php file by going PHP and then close the PHP
+2:51:57
+tag. Then we have to include the file calendar.php
+2:52:03
+and then put a semicolon. So we have to include the file calendar.php.
+2:52:09
+The next update or edit right before the script tag we have to open another
+2:52:16
+script tag or script command by going script and then slashcript. Inside this
+2:52:23
+script we have to initialize a constant and call it events equals we have to
+2:52:29
+open a PHP tag and close it. Then inside these between between the opening and
+2:52:35
+closing tags we have to call the function JSON encode. We have to encode
+2:52:40
+JSON to the and then pass to this function the value events events from
+2:52:48
+DB. So this variable is coming from this file. We have this variable events from
+2:52:53
+DB. This is a variable called events from DB that contains all of this information. So we have to encode it in
+2:53:01
+a JSON format by passing it to the function JSON encode. And then we have
+2:53:06
+to pass this option JSON unescaped unique code.
+2:53:13
+Okay. Now we will close this by adding semicolon.
+2:53:19
+Let's go to our app and then reload the page. Three, two, one, reload. Hooray.
+2:53:27
+Now we have our calendar app ready to go. And it's now ready to book some days
+2:53:33
+and do all of that stuff. First of all, you will notice that we have a nice and
+2:53:39
+amazing header which contains the string course calendar my calendar project and
+2:53:44
+also we have this clock counting up every second. Okay. And then we have
+2:53:50
+this box which contains the name of the current month and the number of the current year. And also we can navigate
+2:53:58
+back and forth. You can go back April, March and we can go forth by going June,
+2:54:03
+July and August, September, November, December and then to the next year. You
+2:54:09
+can notice it will shift the to the next year. Okay. Now if you if you reload the
+2:54:14
+page you will be redirected to the current month to the current year and also to the current day. You will notice
+2:54:20
+that the current day is highlighted with the background blue. So the current day
+2:54:26
+is highlighted as a background of blue and you can add a new you can add new uh
+2:54:34
+event. You you'll notice we have course title as an input. You can type in the
+2:54:39
+course title for example HTML HTML course and then the instructor name for
+2:54:46
+example me Muhammad and then it will start from this date. Okay. From from
+2:54:52
+today till the end it will be for example
+2:54:57
+9. Okay. Then we will save that.
+2:55:02
+Okay. So you'll notice that we have this event starting from the 6th of June till
+2:55:09
+the 9th of June. Also you can edit its its name. Now notice we have its name as
+2:55:16
+HTML course. Okay. We can edit it by going edit and then change its name for
+2:55:22
+example to CSS course. Now you will uh if you save that it will become CSS
+2:55:27
+course and also the nice thing in here you can edit and edit the instructor name. So for example instructor name as
+2:55:35
+for example John and now save that it will become John. So the instructor of
+2:55:40
+the course is John. If we zoom in to see we have now the instructor name as John
+2:55:45
+and the course name as CSS course also we can edit the the the hours. So we can
+2:55:52
+go start time edit it. Now it's starting from the 9:00 till 10:00. We can edit it
+2:56:01
+to for example start from 1:00 a.m. to 5:00 a.m. And now and now we can save
+2:56:08
+that it starts from 1:00 till 5:00. And that shows us the time for for every
+2:56:16
+single day. Okay. So now we have 1:00 till 5:00. Also, we can add multiple
+2:56:22
+events in the same day by going add and then add another event. For example, the
+2:56:27
+course title as data science course and the instructor is for example called
+2:56:33
+Smith. And now we can update the start date or we can keep it the same. End
+2:56:38
+date it can span till the 19 of this month. Then we can update the the start
+2:56:45
+time for example starts from 10 p.m. for example. You can also alter this alter
+2:56:51
+it or modify it to 2 PM. And then the end time will be to 12 p.m. 12 p.m.
+2:57:00
+or A.M. Okay. And then save. Yes. Now we have data science scores
+2:57:07
+that the teacher is Smith. It's it overlaps with the with the CS scores
+2:57:12
+till the the 9th of this month and then it it grows or it spans only till the
+2:57:20
+19th of this the 19th of this month. So we have built a robust and scalable app.
+2:57:26
+I I am proud of you. Okay. Now we will also try to delete this
+2:57:33
+event which is you can choose from here. If we try to edit this when when we have
+2:57:39
+overlapping events and click on edit we have a input here h what this input does
+2:57:47
+when we click over it you will notice that we have CSS course and data science
+2:57:52
+course so it's telling you which course you want to edit which course you want to update in this case for example I
+2:57:59
+want to update the CSS course and change its name from being CSS to be a
+2:58:04
+JavaScript course by going JavaScript or for example for short let's keep it JS
+2:58:10
+and then we can save that it's now JS course as you can see we have JS course
+2:58:16
+JS course JS course and JS course and then it stops in the ninth at at the 9th
+2:58:21
+of this month and the data science will span alone we can edit the also the for
+2:58:28
+example JS scores and and and then delete it if you want to delete it you can delete it and it will be It will
+2:58:35
+show a popup to confirm that procedure. Are you sure you want to delete this appointment? H yes I am sure. Okay. Now
+2:58:43
+you will notice that we don't have that event anymore. And that is our app. As
+2:58:49
+you can see we can add we can edit we can delete and also you can go into here and add another appointment. For
+2:58:56
+example, uh we can name it as data analysis or or AI AI course or AI boot
+2:59:03
+camp in this case and then instructor name for example as John and then the
+2:59:10
+start date from uh 22 of this month June and the end
+2:59:15
+date I want it to end on the the last day of this month. The the oct you can
+2:59:21
+adjust it you can keep it the same and then save. You'll notice that we have here so 20 and 21 we have we don't have
+2:59:29
+anything but from 22 till the 30 of this month we have these uh AI boot camp and
+2:59:36
+the instructor is John also you can edit the end date the end date alone not just
+2:59:42
+you can edit not just you can edit the course title or instructor name but also we can adjust the end date to end to end
+2:59:50
+for example on the 27 of this month. save it will end on the 27th of this
+2:59:55
+month and we don't have on 28 or 29 anything as you can see. Then we can
+3:00:02
+also uh we when we have over this these days we have just add but when we when
+3:00:08
+we have on an on a day that has existing events it shows add and edit. Okay, it
+3:00:14
+shows add and edit and then we can edit the starting of this event to to start
+3:00:21
+from the 20 of this month because right now we don't have this anything on on
+3:00:27
+20. Now it will start from 20 till 27. So this is that's it. That's the end of
+3:00:34
+the calendar project app. We have built a Google calendar clone project. We have
+3:00:40
+replicated the dates, the times uh features in the app and we have created
+3:00:46
+successfully databases. And if you notice when we browse the database now
+3:00:52
+in the in the course calendar calendar and then go to appointments.
+3:01:02
+It's now storing in this database as you can see. Yes. Now we we have these HTML
+3:01:09
+course. The instructor is Muhammad. Data science course instructor is Smith and start date, end date, created date also
+3:01:17
+when it was created, start time and end time. So we have built this robust and
+3:01:23
+scalable project using HTML, CSS, JavaScript, PHP and SQL. It's a full
+3:01:30
+stack project and I hope you liked it. See you in the next tutorials and
+3:01:36
+lectures.

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where php:*)",
+      "Bash(where mysql:*)",
+      "Read(//c//**)",
+      "Bash(find /c -maxdepth 2 -name xampp-control.exe)",
+      "Bash(cmd.exe /c \"where php 2>nul & where mysql 2>nul & dir C:\\\\xampp 2>nul & dir C:\\\\wamp 2>nul & dir C:\\\\laragon 2>nul\")",
+      "Bash(cmd.exe /c \"where php\")",
+      "Bash(cmd.exe /c \"dir C:\\\\xampp\")",
+      "Bash(cmd.exe /c \"dir C:\\\\wamp\")",
+      "Bash(cmd.exe /c \"dir C:\\\\laragon\")",
+      "Bash(powershell.exe -Command \"Test-Path C:\\\\wamp64\")",
+      "Bash(powershell.exe -Command \"Get-Process -Name ''mysqld'',''mariadbd'' -ErrorAction SilentlyContinue | Select-Object Name, Id\")",
+      "Bash(powershell.exe -Command \"Get-Process | Where-Object {$_Name -match ''sql|maria|wamp''} | Select-Object Name, Id\")",
+      "Bash(tasklist)",
+      "Bash(powershell.exe -Command \"netstat -ano\")",
+      "Bash(mkdir -p \"/c/wamp64/www/agenda\")",
+      "Bash(cp \"C:/Users/Asimiir/Desktop/agenda/index.php\" \"C:/wamp64/www/agenda/\")",
+      "Bash(cp \"C:/Users/Asimiir/Desktop/agenda/calendar.php\" \"C:/wamp64/www/agenda/\")",
+      "Bash(cp \"C:/Users/Asimiir/Desktop/agenda/connection.php\" \"C:/wamp64/www/agenda/\")",
+      "Bash(cp \"C:/Users/Asimiir/Desktop/agenda/style.css\" \"C:/wamp64/www/agenda/\")",
+      "Bash(cp \"C:/Users/Asimiir/Desktop/agenda/calendar.js\" \"C:/wamp64/www/agenda/\")",
+      "Bash(curl -s \"http://localhost:8000/agenda/\")"
+    ]
+  }
+}
