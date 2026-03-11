@@ -52,6 +52,9 @@ function renderCalendar(date) {
         // Events for this day
         const eventsToday = events.filter(e => e.date === dateString);
 
+        const eventBox = document.createElement('div');
+        eventBox.className = 'events';
+
         eventsToday.forEach(event => {
             const ev = document.createElement('div');
             ev.className = 'event';
@@ -72,7 +75,7 @@ function renderCalendar(date) {
             ev.appendChild(courseEl);
             ev.appendChild(instructorEl);
             ev.appendChild(timeEl);
-            cell.appendChild(ev);
+            eventBox.appendChild(ev);
         });
 
         // Overlay buttons (Add / Edit)
@@ -100,6 +103,7 @@ function renderCalendar(date) {
         }
 
         cell.appendChild(overlay);
+        cell.appendChild(eventBox);
         calendarEl.appendChild(cell);
     }
 }
@@ -115,13 +119,19 @@ function openModalForAdd(dateString) {
     document.getElementById('startTime').value = '09:00';
     document.getElementById('endTime').value = '10:00';
 
-    document.getElementById('eventSelectorWrapper').style.display = 'none';
+    const selector = document.getElementById('eventSelector');
+    const wrapper = document.getElementById('eventSelectorWrapper');
+    if (selector && wrapper) {
+        selector.innerHTML = '';
+        wrapper.style.display = 'none';
+    }
 
     modalEl.style.display = 'flex';
 }
 
 function openModalForEdit(eventsOnDate) {
     document.getElementById('formAction').value = 'edit';
+    modalEl.style.display = 'flex';
 
     const selector = document.getElementById('eventSelector');
     const wrapper = document.getElementById('eventSelectorWrapper');
@@ -143,8 +153,6 @@ function openModalForEdit(eventsOnDate) {
 
     // Pre-fill with first event
     handleEventSelection(JSON.stringify(eventsOnDate[0]));
-
-    modalEl.style.display = 'flex';
 }
 
 function handleEventSelection(eventJSON) {
@@ -153,9 +161,10 @@ function handleEventSelection(eventJSON) {
     document.getElementById('eventID').value = event.id;
     document.getElementById('deleteEventID').value = event.id;
 
-    const parts = event.title.split(' - ');
-    document.getElementById('courseName').value = parts[0] ? parts[0].trim() : '';
-    document.getElementById('instructorName').value = parts[1] ? parts[1].trim() : '';
+    const [course, instructor] = event.title.split(' - ').map(e => e.trim());
+
+    document.getElementById('courseName').value = course || '';
+    document.getElementById('instructorName').value = instructor || '';
     document.getElementById('startDate').value = event.start;
     document.getElementById('endDate').value = event.end;
     document.getElementById('startTime').value = event.start_time;
@@ -174,10 +183,11 @@ function changeMonth(offset) {
 function updateClock() {
     const now = new Date();
     const clock = document.getElementById('clock');
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
-    clock.textContent = h + ':' + m + ':' + s;
+    clock.textContent = [
+        now.getHours().toString().padStart(2, '0'),
+        now.getMinutes().toString().padStart(2, '0'),
+        now.getSeconds().toString().padStart(2, '0')
+    ].join(':');
 }
 
 // Initialize

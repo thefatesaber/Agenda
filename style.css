@@ -59,7 +59,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Nav buttons */
+/* Nav buttons container */
 .nav-btn-container {
     display: flex;
     justify-content: space-between;
@@ -73,17 +73,16 @@ header {
     border: none;
     cursor: pointer;
     color: var(--primary-dark);
-    font-weight: bold;
 }
 
 /* Calendar grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
+    gap: 10px;
 }
 
-/* Mobile layout */
+/* Mobile: horizontal scroll */
 @media (max-width: 1024px) {
     .calendar-grid {
         display: flex;
@@ -101,12 +100,9 @@ header {
     }
 }
 
+.day,
 .day-name {
     text-align: center;
-    font-weight: bold;
-    font-size: 0.85rem;
-    color: var(--primary-dark);
-    padding: 4px 0;
 }
 
 .day {
@@ -135,7 +131,6 @@ header {
 .date-number {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 0.9rem;
 }
 
 .event {
@@ -143,8 +138,8 @@ header {
     color: white;
     padding: 6px 8px;
     border-radius: 6px;
-    margin-top: 4px;
-    font-size: 12px;
+    margin-top: 6px;
+    font-size: 13px;
     cursor: pointer;
     line-height: 1.4;
     display: flex;
@@ -160,18 +155,24 @@ header {
 
 .event .course {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .event .instructor {
-    font-size: 11px;
+    font-size: 12px;
     opacity: 0.85;
 }
 
 .event .time {
-    font-size: 11px;
-    margin-top: 2px;
+    font-size: 12px;
+    margin-top: 3px;
     color: #f3f3f3;
+}
+
+.event-meta {
+    font-size: 12px;
+    color: #ef;
+    line-height: 1.2;
 }
 
 /* Alerts */
@@ -210,32 +211,26 @@ header {
     padding: 2rem;
     border-radius: 10px;
     max-width: 420px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    max-height: 90vh;
-    overflow-y: auto;
 }
 
 .modal-content label {
     display: block;
     font-weight: bold;
     margin-top: 1rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="date"],
-.modal-content input[type="time"] {
+.modal-content input {
     width: 100%;
-    padding: 8px 10px;
+    padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Inter', sans-serif;
 }
 
-.modal-content button[type="submit"] {
-    display: block;
+.modal-content button {
     margin-top: 1rem;
     padding: 10px;
     width: 100%;
@@ -243,52 +238,36 @@ header {
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
     background-color: var(--primary);
     color: white;
-    font-family: 'Inter', sans-serif;
 }
 
 .submit-btn {
-    display: block;
-    margin-top: 0.75rem;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
     background-color: crimson;
-    color: white;
-    font-family: 'Inter', sans-serif;
+    color: #fff;
 }
 
-.cancel-btn {
-    display: block;
-    margin-top: 0.75rem;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+/* Cancel button — last button in modal gets gray override */
+.modal-content button:last-child {
     background-color: #e5e7eb;
     color: #333;
-    font-family: 'Inter', sans-serif;
 }
 
-/* Event selector dropdown */
+/* Dropdown for multiple events */
 #eventSelector {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: 'Inter', sans-serif;
 }
 
-/* Overlay add/edit buttons on hover */
+/* Overlay buttons logic */
 .day-overlay {
     position: absolute;
     top: 6px;
@@ -306,8 +285,8 @@ header {
 .overlay-btn {
     background: var(--primary-dark);
     color: white;
-    padding: 3px 7px;
-    font-size: 11px;
+    padding: 4px 8px;
+    font-size: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;

@@ -25,7 +25,7 @@
     <div class="calendar">
         <div class="nav-btn-container">
             <div class="nav-btn" onclick="changeMonth(-1)">&#8249;</div>
-            <h2 id="monthYear" style="margin:0"></h2>
+            <h2 id="monthYear" style="margin: 0;"></h2>
             <button class="nav-btn" onclick="changeMonth(1)">&#8250;</button>
         </div>
 
@@ -43,7 +43,7 @@
     <div class="modal" id="eventModal">
         <div class="modal-content">
 
-            <div id="eventSelectorWrapper" style="display:none;">
+            <div id="eventSelectorWrapper">
                 <label for="eventSelector"><strong>Select Event</strong></label>
                 <select id="eventSelector" onchange="handleEventSelection(this.value)">
                     <option disabled selected>Choose event...</option>
@@ -80,10 +80,10 @@
             <form method="POST" onsubmit="return confirm('Are you sure you want to delete this appointment?')">
                 <input type="hidden" name="action" value="delete">
                 <input type="hidden" name="event_id" id="deleteEventID">
-                <button type="submit" class="submit-btn">&#128465; Delete</button>
+                <button type="submit" class="submit-btn">&#128465; Delete this event</button>
             </form>
 
-            <button type="button" onclick="closeModal()" class="cancel-btn">&#10005; Cancel</button>
+            <button type="button" onclick="closeModal()" class="submit-btn">&#10005; Cancel</button>
 
         </div>
     </div>
