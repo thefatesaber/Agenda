@@ -122,7 +122,8 @@
       "Bash(\"C:/wamp64/bin/php/php8.3.0/php.exe\" -l \"C:/wamp64/www/agenda/ajax.php\")",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://localhost/agenda/)",
       "Bash(node -e \"const fs=require\\(''fs''\\);const code=fs.readFileSync\\(''C:/wamp64/www/agenda/calendar.js'',''utf8''\\);try{new Function\\(code\\);console.log\\(''OK''\\);}catch\\(e\\){console.log\\(''ERROR:'',e.message\\);}\")",
-      "Bash(node -e \"const fs=require\\(''''fs''''\\);const code=fs.readFileSync\\(''''C:/wamp64/www/agenda/calendar.js'''',''''utf8''''\\);try{new Function\\(code\\);console.log\\(''''SYNTAX OK - lines: ''''+code.split\\(''''\\\\n''''\\).length\\);}catch\\(e\\){console.log\\(''''ERROR:'''',e.message\\);}\")"
+      "Bash(node -e \"const fs=require\\(''''fs''''\\);const code=fs.readFileSync\\(''''C:/wamp64/www/agenda/calendar.js'''',''''utf8''''\\);try{new Function\\(code\\);console.log\\(''''SYNTAX OK - lines: ''''+code.split\\(''''\\\\n''''\\).length\\);}catch\\(e\\){console.log\\(''''ERROR:'''',e.message\\);}\")",
+      "Bash(wc -l /c/Users/Asimiir/Desktop/agenda/*.php /c/Users/Asimiir/Desktop/agenda/*.js /c/Users/Asimiir/Desktop/agenda/*.css)"
     ]
   }
 }
